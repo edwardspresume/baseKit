@@ -5,27 +5,36 @@
 		"dev": "vite dev",
 		"build": "vite build",
 		"preview": "vite preview",
-		"test": "npm run test:integration && npm run test:unit",
+		"test": "npm run test:e2e && npm run test:unit",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
 		"lint": "prettier --check . && eslint .",
 		"format": "prettier --write .",
-		"test:integration": "playwright test",
-		"test:unit": "vitest"
+		"test:e2e": "playwright test",
+		"test:unit": "vitest -u",
+		"migration:generate": "drizzle-kit generate:pg",
+		"migration:push": "drizzle-kit push:pg",
+		"migration:pull": "drizzle-kit introspect:pg",
+		"migration:drop": "drizzle-kit drop",
+		"migration:check": "drizzle-kit check:pg"
 	},
 	"devDependencies": {
+		"@bobbymannino/svelte-progress": "^2.3.0",
 		"@fontsource/fira-mono": "^4.5.10",
 		"@neoconfetti/svelte": "^1.0.0",
 		"@playwright/test": "^1.28.1",
 		"@sveltejs/adapter-auto": "^2.0.0",
 		"@sveltejs/kit": "^1.27.4",
+		"@total-typescript/ts-reset": "^0.5.1",
 		"@types/cookie": "^0.5.1",
+		"@types/jsdom": "^21.1.6",
 		"@typescript-eslint/eslint-plugin": "^6.0.0",
 		"@typescript-eslint/parser": "^6.0.0",
 		"autoprefixer": "^10.4.14",
 		"eslint": "^8.28.0",
 		"eslint-config-prettier": "^9.0.0",
 		"eslint-plugin-svelte": "^2.30.0",
+		"jsdom": "^22.1.0",
 		"postcss": "^8.4.24",
 		"postcss-load-config": "^4.0.1",
 		"prettier": "^3.0.0",
@@ -38,5 +47,11 @@
 		"vite": "^4.4.2",
 		"vitest": "^0.32.2"
 	},
-	"type": "module"
+	"type": "module",
+	"dependencies": {
+		"@tabler/icons-svelte": "^2.42.0",
+		"clsx": "^2.0.0",
+		"postcss-preset-env": "^9.3.0",
+		"tailwind-merge": "^2.0.0"
+	}
 }
