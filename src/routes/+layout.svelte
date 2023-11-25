@@ -1,10 +1,10 @@
 <script>
 	import '../app.pcss';
 
-	import SiteHeader from '$components/siteMainHeader/SiteMainHeader.svelte';
+	import SiteMainHeader from '$components/siteMainHeader/SiteMainHeader.svelte';
 </script>
 
-<SiteHeader />
+<SiteMainHeader />
 
 <main>
 	<slot />

@@ -10,13 +10,13 @@
 	import { cn } from '$lib';
 	import { Routes } from '$lib/navLinks';
 
-	import SiteNavMenuToggleBtn, { isSiteNavMenuOpen } from './SiteNavMenuToggleBtn.svelte';
+	import SiteMainNavMenuToggleBtn, { isSiteNavMenuOpen } from './SiteMainNavMenuToggleBtn.svelte';
 
 	let className: HTMLAttributes<HTMLElement>['class'] = undefined;
 	export { className as class };
 </script>
 
-<SiteNavMenuToggleBtn />
+<SiteMainNavMenuToggleBtn />
 
 <nav
 	id={MAIN_NAV_ID}
