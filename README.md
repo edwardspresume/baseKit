@@ -30,3 +30,41 @@ When you use this template, try follow the checklist to update your info properl
 
 - [ ] Change the favicon in `static`
 - [ ] Add sitemap to `static`
+
+## Getting Started
+
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+
+### Prerequisites
+
+Make sure you have `pnpm` installed on your system. If you don't have `pnpm` installed, you can install it by running:
+
+```bash
+npm install -g pnpm
+```
+
+### Installation
+
+To install the dependencies, run the following command:
+
+```bash
+pnpm install
+```
+
+### Development
+
+To start the development server, run:
+
+```bash
+pnpm dev
+```
+
+This will start the server and open the app in a new browser tab and visit http://localhost:5173/. Changes in the code will automatically rebuild the app and refresh the page.
+
+### Build
+
+To build the application for production, use:
+
+```bash
+pnpm build
+```
