@@ -59,7 +59,7 @@ To start the development server, run:
 pnpm dev
 ```
 
-This will start the server and open the app in a new browser tab and visit http://localhost:5173/. Changes in the code will automatically rebuild the app and refresh the page.
+This will start the server and open the app in a new browser tab by visiting http://localhost:5173/. Changes in the code will automatically rebuild the app and refresh the page.
 
 ### Build
 
