@@ -15,7 +15,7 @@ This is a starter template for [SvelteKit](https://kit.svelte.dev/) applications
 - 🧪 **Testing**: Unit tests with [Vitest](https://vitest.dev/), E2E tests with [Playwright](https://playwright.dev/).
 - 📜 **[JSDOM](https://github.com/jsdom/jsdom)**: Simulates the DOM for testing.
 
-### Additions to the default SvelteKit TSConfig
+## Additions to the default SvelteKit TSConfig
 
 - `noUnusedLocals`: Avoids unused variable declarations.
 - `moduleDetection`: Enhanced module detection.
