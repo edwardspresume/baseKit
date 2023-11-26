@@ -5,8 +5,6 @@
 <script lang="ts">
 	import type { HTMLAttributes } from 'svelte/elements';
 
-	import { IconMailFilled } from '@tabler/icons-svelte';
-
 	import { cn } from '$lib';
 	import { Routes } from '$lib/navLinks';
 
@@ -34,7 +32,7 @@
 		class="flex items-center justify-center w-full gap-2 p-2 transition-colors duration-300 border rounded hover:opacity-40 sm:text-xl whitespace-nowrap"
 	>
 		<iconify-icon icon="fluent:mail-24-filled"></iconify-icon>
-		
+
 		<span>Contact us</span>
 	</a>
 </nav>

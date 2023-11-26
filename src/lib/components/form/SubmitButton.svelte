@@ -1,8 +1,6 @@
 <script lang="ts">
 	import type { HTMLButtonAttributes } from 'svelte/elements';
 
-	import { IconLoader2 } from '@tabler/icons-svelte';
-
 	import { cn } from '$lib/index';
 
 	let className: HTMLButtonAttributes['class'] = undefined;
@@ -22,7 +20,7 @@
 	)}
 >
 	{#if showSpinner === null ? disabled : showSpinner}
-		<IconLoader2 class="animate-spin" />
+		<iconify-icon icon="eos-icons:bubble-loading"></iconify-icon>
 	{/if}
 
 	<span>
