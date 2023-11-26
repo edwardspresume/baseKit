@@ -4,7 +4,7 @@
 	import SiteMainNav from './SiteMainNav.svelte';
 </script>
 
-<header class="relative border-b border-white/10">
+<header class="relative border-b">
 	<div class="container flex items-center justify-between p-2">
 		<a href={Routes.HOMEPAGE}>Logo</a>
 
