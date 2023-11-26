@@ -15,6 +15,10 @@ This is a starter template for [SvelteKit](https://kit.svelte.dev/) applications
 - 🧪 **Testing**: Unit tests with [Vitest](https://vitest.dev/), E2E tests with [Playwright](https://playwright.dev/).
 - 📜 **[JSDOM](https://github.com/jsdom/jsdom)**: Simulates the DOM for testing.
 
+## Plugins
+
+- **[@sveltejs/enhanced-img](https://www.npmjs.com/package/@sveltejs/enhanced-img)**: Experimental Vite plugin which runs a Svelte preprocessor to locate images and then transform them at build-time.
+
 ## Additions to the default SvelteKit TSConfig
 
 - `noUnusedLocals`: Avoids unused variable declarations.
