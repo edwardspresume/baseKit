@@ -1,39 +1,6 @@
 # SvelteKit Starter Template
 
-This is a starter template for [SvelteKit](https://kit.svelte.dev/) applications. It's configured with a number of tools to help me develop high-quality, maintainable code.
-
-## Features
-
-- 📘 **[TypeScript](https://www.typescriptlang.org/)**: Empowers development with static types.
-- 🔧 **[TS Reset](https://www.totaltypescript.com/ts-reset)**: Tightens TypeScript's type checking.
-- 🎨 **[PostCSS Preset Env](https://www.npmjs.com/package/postcss-preset-env)**: Facilitates the use of modern CSS features.
-- 💨 **[Tailwind CSS](https://tailwindcss.com/)**: Utility-first CSS framework for rapid UI development.
-- 🤝 **[Tailwind Merge](https://github.com/dcastil/tailwind-merge)** & **[clsx](https://github.com/lukeed/clsx)**: Allows you to merge classes together.
-- 🎨 **[Iconify](https://iconify.design/docs/iconify-icon/)**: Extensive icon library.
-- ⏳ **[Svelte Progress](https://www.npmjs.com/package/@bobbymannino/svelte-progress)**: Provides loading indicators.
-- 🛠️ **[ESLint](https://eslint.org/)** & **✨ [Prettier](https://prettier.io/)**: Enforces code consistency.
-- 🧪 **Testing**: Unit tests with [Vitest](https://vitest.dev/), E2E tests with [Playwright](https://playwright.dev/).
-- 📜 **[JSDOM](https://github.com/jsdom/jsdom)**: Simulates the DOM for testing.
-
-## Plugins
-
-- **[@sveltejs/enhanced-img](https://www.npmjs.com/package/@sveltejs/enhanced-img)**: Experimental Vite plugin which runs a Svelte preprocessor to locate images and then transform them at build-time.
-
-## Additions to the default SvelteKit TSConfig
-
-- `noUnusedLocals`: Avoids unused variable declarations.
-- `moduleDetection`: Enhanced module detection.
-- `noUnusedParameters`: Checks for unused function parameters.
-- `verbatimModuleSyntax`: Preserves module syntax upon import.
-- `noUncheckedIndexedAccess`: Enforces checks on indexed access.
-- `types`: Includes Vitest's global type definitions.
-
-## Checklist
-
-When you use this template, try follow the checklist to update your info properly
-
-- [ ] Change the favicon in `static`
-- [ ] Add sitemap to `static`
+This starter template is designed for developers looking to jumpstart their [SvelteKit](https://kit.svelte.dev/) projects. It comes pre-configured with a suite of tools in aim to enforce best practices and ensure high-quality, maintainable code.
 
 ## Getting Started
 
@@ -41,11 +8,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-Make sure you have `pnpm` installed on your system. If you don't have `pnpm` installed, you can install it by running:
-
-```bash
-npm install -g pnpm
-```
+Ensure you have `pnpm` installed on your system for efficient package management. For installation instructions, visit the [official pnpm installation guide](https://pnpm.io/installation).
 
 ### Installation
 
@@ -72,3 +35,48 @@ To build the application for production, use:
 ```bash
 pnpm build
 ```
+
+## Features
+
+### Language and Typing
+
+- 📘 **[TypeScript](https://www.typescriptlang.org/)**: Static types for JavaScript.
+- 🔧 **[TS Reset](https://www.totaltypescript.com/ts-reset)**: Improved TypeScript type checking.
+
+### Styling and UI
+
+- 🎨 **[PostCSS Preset Env](https://www.npmjs.com/package/postcss-preset-env)**: Facilitates the use of modern CSS features.
+- 🧩 **[Shadcn-svelte](https://www.shadcn-svelte.com/)**: Accessible and customizable component library.
+- 💨 **[Tailwind CSS](https://tailwindcss.com/)**: Utility-first CSS framework for rapid UI development.
+- 🤝 **[Tailwind Merge](https://github.com/dcastil/tailwind-merge)** & **[clsx](https://github.com/lukeed/clsx)**: Allows you to merge classes together.
+
+### Icons and Progress Indicators
+
+- 🎨 **[Iconify](https://iconify.design/docs/iconify-icon/)**: Extensive SVG icons.
+- ⏳ **[Svelte Progress](https://www.npmjs.com/package/@bobbymannino/svelte-progress)**: Loading indicators components.
+
+### Code Quality and Testing
+
+- 🛠️ **[ESLint](https://eslint.org/)** & **✨ [Prettier](https://prettier.io/)**: Code quality tools.
+- 🧪 **Testing**: Unit tests with [Vitest](https://vitest.dev/), E2E tests with [Playwright](https://playwright.dev/).
+- 📜 **[JSDOM](https://github.com/jsdom/jsdom)**: Simulates the DOM for testing.
+
+### Plugins
+
+- **[@sveltejs/enhanced-img](https://www.npmjs.com/package/@sveltejs/enhanced-img)**: Experimental image optimization.
+
+## Additions to the default SvelteKit TSConfig
+
+- `noUnusedLocals`: Avoids unused variable declarations.
+- `moduleDetection`: Enhanced module detection.
+- `noUnusedParameters`: Checks for unused function parameters.
+- `verbatimModuleSyntax`: Preserves module syntax upon import.
+- `noUncheckedIndexedAccess`: Enforces checks on indexed access.
+- `types`: Includes Vitest's global type definitions.
+
+## Checklist
+
+When you use this template, try follow the checklist to update your info properly
+
+- [ ] Change the favicon in `static`
+- [ ] Add sitemap to `static`
