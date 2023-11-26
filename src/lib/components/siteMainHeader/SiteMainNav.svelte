@@ -33,8 +33,8 @@
 		tabindex={$isSiteNavMenuOpen ? 0 : -1}
 		class="flex items-center justify-center w-full gap-2 p-2 transition-colors duration-300 border rounded hover:opacity-40 sm:text-xl whitespace-nowrap"
 	>
-		<IconMailFilled size={20} class="w-4 sm:w-full" />
-
+		<iconify-icon icon="fluent:mail-24-filled"></iconify-icon>
+		
 		<span>Contact us</span>
 	</a>
 </nav>

@@ -9,7 +9,7 @@ This is a starter template for [SvelteKit](https://kit.svelte.dev/) applications
 - 🎨 **[PostCSS Preset Env](https://www.npmjs.com/package/postcss-preset-env)**: Facilitates the use of modern CSS features.
 - 💨 **[Tailwind CSS](https://tailwindcss.com/)**: Utility-first CSS framework for rapid UI development.
 - 🤝 **[Tailwind Merge](https://github.com/dcastil/tailwind-merge)** & **[clsx](https://github.com/lukeed/clsx)**: Allows you to merge classes together.
-- 🎨 **[Tabler Icons](https://github.com/tabler/tabler-icons)**: Extensive icon library.
+- 🎨 **[Iconify](https://iconify.design/docs/iconify-icon/)**: Extensive icon library.
 - ⏳ **[Svelte Progress](https://www.npmjs.com/package/@bobbymannino/svelte-progress)**: Provides loading indicators.
 - 🛠️ **[ESLint](https://eslint.org/)** & **✨ [Prettier](https://prettier.io/)**: Enforces code consistency.
 - 🧪 **Testing**: Unit tests with [Vitest](https://vitest.dev/), E2E tests with [Playwright](https://playwright.dev/).
