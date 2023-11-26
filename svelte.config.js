@@ -16,6 +16,11 @@ const config = {
 		alias: {
 			$assets: 'src/lib/assets',
 			$components: 'src/lib/components'
+		},
+
+		// remove this if you don't want prerendering
+		prerender: {
+			entries: ['/sitemap.xml']
 		}
 	},
 
