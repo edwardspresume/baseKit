@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { HTMLButtonAttributes } from 'svelte/elements';
 
-	import { cn } from '$lib/index';
+	import { cn } from '$lib/utils';
 
 	let className: HTMLButtonAttributes['class'] = undefined;
 
