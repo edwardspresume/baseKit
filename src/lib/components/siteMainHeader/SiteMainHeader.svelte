@@ -6,7 +6,7 @@
 
 <header class="relative border-b">
 	<div class="container flex items-center justify-between p-2">
-		<a href={Routes.HOMEPAGE}>Logo</a>
+		<a href={Routes.HOMEPAGE} class="text-2xl font-bold">Logo</a>
 
 		<SiteMainNav />
 	</div>

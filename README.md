@@ -80,3 +80,5 @@ When you use this template, try follow the checklist to update your info properl
 
 - [ ] Change the favicon in `static`
 - [ ] Add sitemap to `static`
+- [ ] Update `README.md`
+- [ ] Update project name in `package.json`
