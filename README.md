@@ -55,6 +55,11 @@ pnpm build
 - 🎨 **[Iconify](https://iconify.design/docs/iconify-icon/)**: Extensive SVG icons.
 - ⏳ **[Svelte Progress](https://www.npmjs.com/package/@bobbymannino/svelte-progress)**: Loading indicators components.
 
+### Feedback and Communication
+
+- 📧 **[Nodemailer](https://nodemailer.com/about/)**: Allows sending emails directly from the application, enabling feedback and contact features.
+
+
 ## Validation and Sanitization
 
 - 📝 **[SvelteKit Superforms](https://superforms.rocks/)**: A comprehensive solution for server and client validation, and client-side display of forms.
