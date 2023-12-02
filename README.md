@@ -57,7 +57,7 @@ pnpm build
 
 ## Validation and Sanitization
 
-- 📝 **[SvelteKit Superforms](https://github.com/janosh/sveltekit-superforms)**: A comprehensive solution for server and client validation, and client-side display of forms.
+- 📝 **[SvelteKit Superforms](https://superforms.rocks/)**: A comprehensive solution for server and client validation, and client-side display of forms.
 - 🛡️ **[Zod](https://github.com/colinhacks/zod)**: TypeScript-first schema validation with static type inference.
 - 🧼 **[DOMPurify](https://github.com/cure53/DOMPurify)**: Sanitizes HTML and prevents XSS attacks.
 
