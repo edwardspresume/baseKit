@@ -6,7 +6,7 @@
 	import type { HTMLAttributes } from 'svelte/elements';
 
 	import { Routes } from '$lib/navLinks';
-	import { cn } from '$lib/utils';
+	import { cn } from '$lib/utils/styleTransitionUtils';
 
 	import SiteMainNavMenuToggleBtn, { isSiteNavMenuOpen } from './SiteMainNavMenuToggleBtn.svelte';
 
