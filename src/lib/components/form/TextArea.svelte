@@ -1,8 +1,8 @@
 <script lang="ts">
 	import type { HTMLTextareaAttributes } from 'svelte/elements';
 
+	import type { EnterKeyHintType } from '$lib/types';
 	import { cn } from '$lib/utils/styleTransitionUtils';
-	import type { EnterKeyHint } from '$lib/types';
 
 	let className: HTMLTextareaAttributes['class'] = undefined;
 	export { className as class };
@@ -11,7 +11,7 @@
 	export let label: string = '';
 	export let placeholder: string = '';
 	export let spellcheck: boolean = true;
-	export let enterkeyhint: EnterKeyHint = 'enter';
+	export let enterkeyhint: EnterKeyHintType = 'enter';
 	export let maxlength: number | undefined = undefined;
 	export let errorMessage: object | undefined = undefined;
 

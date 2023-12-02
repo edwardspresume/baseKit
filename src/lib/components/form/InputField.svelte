@@ -1,8 +1,8 @@
 <script lang="ts">
 	import type { HTMLInputAttributes } from 'svelte/elements';
 
+	import type { EnterKeyHintType } from '$lib/types';
 	import { cn } from '$lib/utils/styleTransitionUtils';
-	import type { EnterKeyHint } from '$lib/types';
 
 	let className: HTMLInputAttributes['class'] = undefined;
 	export { className as class };
@@ -13,7 +13,7 @@
 	export let placeholder: string = '';
 	export let spellcheck: boolean = true;
 	export let autocomplete: string = 'on';
-	export let enterkeyhint: EnterKeyHint = 'next';
+	export let enterkeyhint: EnterKeyHintType = 'next';
 	export let maxlength: number | undefined = undefined;
 	export let errorMessage: object | undefined = undefined;
 

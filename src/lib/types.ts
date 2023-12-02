@@ -5,12 +5,12 @@ export enum AlertType {
 	INFO = 'info'
 }
 
-export type AlertMessage = {
+export type AlertMessageType = {
 	alertType: AlertType;
 	alertText: string;
 };
 
-export type EnterKeyHint =
+export type EnterKeyHintType =
 	| 'search'
 	| 'enter'
 	| 'done'
