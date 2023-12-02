@@ -59,6 +59,9 @@ pnpm build
 
 - 📧 **[Nodemailer](https://nodemailer.com/about/)**: Allows sending emails directly from the application, enabling feedback and contact features.
 
+### Components and Utilities
+
+- 🔔 **[Toast Notifications](https://github.com/wobsoriano/svelte-sonner)**: Toast notifications for user feedback and alerts.
 
 ## Validation and Sanitization
 
