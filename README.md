@@ -88,6 +88,10 @@ pnpm build
 - `verbatimModuleSyntax`: Preserves module syntax upon import.
 - `noUncheckedIndexedAccess`: Enforces checks on indexed access.
 - `types`: Includes Vitest's global type definitions.
+- `noImplicitReturns`: Ensures all code paths in a function return a value.
+- `exactOptionalPropertyTypes`: Treats optional property types as exact, not allowing `undefined` when not specified.
+- `noImplicitOverride`: Requires method overrides to be explicitly marked with `override`.
+- `noPropertyAccessFromIndexSignature`: Requires that properties accessed using an index signature are explicitly declared.
 
 ## Checklist
 
