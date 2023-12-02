@@ -28,7 +28,7 @@ export const createNavLink = (
 	title: string,
 	path: Routes,
 	ariaLabel?: AriaAttributes['aria-label'],
-	isExternal?: boolean
+	isExternal: boolean | undefined = false
 ): NavLink => {
 	if (!title || !path) {
 		throw new Error('Title and path are required to create a NavLink');
