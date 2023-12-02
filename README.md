@@ -55,10 +55,17 @@ pnpm build
 - 🎨 **[Iconify](https://iconify.design/docs/iconify-icon/)**: Extensive SVG icons.
 - ⏳ **[Svelte Progress](https://www.npmjs.com/package/@bobbymannino/svelte-progress)**: Loading indicators components.
 
+## Validation and Sanitization
+
+- 📝 **[SvelteKit Superforms](https://github.com/janosh/sveltekit-superforms)**: A comprehensive solution for server and client validation, and client-side display of forms.
+- 🛡️ **[Zod](https://github.com/colinhacks/zod)**: TypeScript-first schema validation with static type inference.
+- 🧼 **[DOMPurify](https://github.com/cure53/DOMPurify)**: Sanitizes HTML and prevents XSS attacks.
+
 ### Code Quality and Testing
 
 - 🛠️ **[ESLint](https://eslint.org/)** & **✨ [Prettier](https://prettier.io/)**: Code quality tools.
 - 🧪 **Testing**: Unit tests with [Vitest](https://vitest.dev/), E2E tests with [Playwright](https://playwright.dev/).
+- Component tests with [Testing Library for Svelte](https://testing-library.com/docs/svelte-testing-library/intro).
 - 📜 **[JSDOM](https://github.com/jsdom/jsdom)**: Simulates the DOM for testing.
 
 ### Plugins
