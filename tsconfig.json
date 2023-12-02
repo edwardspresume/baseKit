@@ -17,6 +17,10 @@
 		"noUnusedParameters": true,
 		"verbatimModuleSyntax": true,
 		"noUncheckedIndexedAccess": true,
+		"noImplicitReturns": true,
+		"exactOptionalPropertyTypes": true,
+		"noImplicitOverride": true,
+		"noPropertyAccessFromIndexSignature": true,
 		"types": ["vitest/globals"]
 	}
 	// Path aliases are handled by https://kit.svelte.dev/docs/configuration#alias
