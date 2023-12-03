@@ -71,6 +71,7 @@ pnpm build
 
 ### Code Quality and Testing
 
+- 🗑️ **[Knip](https://www.npmjs.com/package/knip)**: Finds unused files, dependencies, and exports in projects.
 - 🛠️ **[ESLint](https://eslint.org/)** & **✨ [Prettier](https://prettier.io/)**: Code quality tools.
 - 🧪 **Testing**: Unit tests with [Vitest](https://vitest.dev/), E2E tests with [Playwright](https://playwright.dev/).
 - Component tests with [Testing Library for Svelte](https://testing-library.com/docs/svelte-testing-library/intro).
