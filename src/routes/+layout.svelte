@@ -20,4 +20,16 @@
 	<main class="container flex-1 p-2 pb-10">
 		<slot />
 	</main>
+
+	<footer class="px-2 py-3 border-t">
+		<div class="container mx-auto">
+			<p class="text-sm text-center">
+				Created by <a
+					href="https://twitter.com/edwardspresume"
+					target="_blank"
+					class="italic text-blue-400 hover:underline hover:text-blue-500">Edwards Presume</a
+				>
+			</p>
+		</div>
+	</footer>
 </div>
