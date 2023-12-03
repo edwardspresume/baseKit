@@ -80,6 +80,8 @@ pnpm build
 ### Plugins
 
 - **[@sveltejs/enhanced-img](https://www.npmjs.com/package/@sveltejs/enhanced-img)**: Experimental image optimization.
+- **[vite-plugin-kit-routes](https://www.npmjs.com/package/vite-plugin-kit-routes)**: Automatically updates route references in SvelteKit projects.
+-
 
 ## Additions to the default SvelteKit TSConfig
 
