@@ -9,10 +9,11 @@
 
 	import { buttonVariants } from '$components/ui/button';
 	import * as Dialog from '$components/ui/dialog';
+	import { route } from '$lib/ROUTES';
 	import SubmitButton from './SubmitButton.svelte';
 	import TextArea from './TextArea.svelte';
 
-	const { enhance, form, errors, message, delayed } = superForm($page.data.feedbackForm, {
+	const { enhance, form, errors, message, delayed } = superForm($page.data['feedbackForm'], {
 		id: 'feedbackForm',
 		resetForm: true,
 		taintedMessage: null,
@@ -46,7 +47,7 @@
 		<form
 			use:enhance
 			method="POST"
-			action="/sendFeedbackToEmail"
+			action={route('default /sendFeedbackToEmail')}
 			aria-label="Send feedback"
 			class="grid gap-5"
 		>
