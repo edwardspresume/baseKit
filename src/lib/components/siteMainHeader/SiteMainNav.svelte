@@ -5,7 +5,6 @@
 <script lang="ts">
 	import type { HTMLAttributes } from 'svelte/elements';
 
-	import { Routes } from '$lib/navLinks';
 	import { cn } from '$lib/utils/styleTransitionUtils';
 
 	import SiteMainNavMenuToggleBtn, { isSiteNavMenuOpen } from './SiteMainNavMenuToggleBtn.svelte';
@@ -25,14 +24,4 @@
 		}`,
 		className
 	)}
->
-	<a
-		href={Routes.CONTACT}
-		tabindex={$isSiteNavMenuOpen ? 0 : -1}
-		class="flex items-center justify-center w-full gap-2 p-2 transition-colors duration-300 border rounded hover:opacity-40 sm:text-xl whitespace-nowrap"
-	>
-		<iconify-icon icon="fluent:mail-24-filled"></iconify-icon>
-
-		<span>Contact us</span>
-	</a>
-</nav>
+></nav>
