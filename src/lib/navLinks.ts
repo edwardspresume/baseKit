@@ -1,10 +1,5 @@
 import type { AriaAttributes } from 'svelte/elements';
-
-// Enum for route paths
-export enum Routes {
-	HOMEPAGE = '/',
-	CONTACT = '/contact'
-}
+import { route } from './ROUTES';
 
 // Type for navigation link
 export type NavLink = {
@@ -26,7 +21,7 @@ export type NavLink = {
  */
 export const createNavLink = (
 	title: string,
-	path: Routes,
+	path: string,
 	ariaLabel?: AriaAttributes['aria-label'],
 	isExternal: boolean | undefined = false
 ): NavLink => {
@@ -42,7 +37,4 @@ export const createNavLink = (
 	};
 };
 
-export const mainNavLinks: NavLink[] = [
-	createNavLink('Home', Routes.HOMEPAGE, 'Go to homepage'),
-	createNavLink('Contact', Routes.CONTACT, 'Go to contact page')
-];
+export const mainNavLinks: NavLink[] = [createNavLink('Home', route('/'), 'Go to homepage')];
