@@ -1,8 +1,9 @@
 <script>
-	import FeedbackForm from '$components/form/FeedbackForm.svelte';
 	import { route } from '$lib/ROUTES';
 
+	import FeedbackForm from '$components/form/FeedbackForm.svelte';
 	import SiteMainNav from './SiteMainNav.svelte';
+	import ThemeToggler from './ThemeToggler.svelte';
 </script>
 
 <header class="relative mb-10 border-b">
@@ -11,6 +12,7 @@
 
 		<div class="flex gap-2">
 			<FeedbackForm />
+			<ThemeToggler />
 			<SiteMainNav />
 		</div>
 	</div>
