@@ -62,6 +62,7 @@
 	"dependencies": {
 		"clsx": "^2.0.0",
 		"dompurify": "^3.0.6",
+		"mode-watcher": "^0.1.2",
 		"nodemailer": "^6.9.7",
 		"postcss-preset-env": "^9.3.0",
 		"svelte-sonner": "^0.3.6",
