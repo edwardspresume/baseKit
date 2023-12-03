@@ -63,6 +63,7 @@
 		"bits-ui": "^0.9.9",
 		"clsx": "^2.0.0",
 		"dompurify": "^3.0.6",
+		"lucide-svelte": "^0.294.0",
 		"mode-watcher": "^0.1.2",
 		"nodemailer": "^6.9.7",
 		"postcss-preset-env": "^9.3.0",

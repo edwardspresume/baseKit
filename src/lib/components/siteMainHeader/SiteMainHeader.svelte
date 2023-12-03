@@ -1,4 +1,5 @@
 <script>
+	import FeedbackForm from '$components/form/FeedbackForm.svelte';
 	import { route } from '$lib/ROUTES';
 
 	import SiteMainNav from './SiteMainNav.svelte';
@@ -8,6 +9,9 @@
 	<div class="container flex items-center justify-between p-2">
 		<a href={route('/')} class="text-2xl font-bold">Logo</a>
 
-		<SiteMainNav />
+		<div class="flex gap-2">
+			<FeedbackForm />
+			<SiteMainNav />
+		</div>
 	</div>
 </header>
