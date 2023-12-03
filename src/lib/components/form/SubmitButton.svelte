@@ -3,6 +3,8 @@
 
 	import { cn } from '$lib/utils/styleTransitionUtils';
 
+	import Button from '$components/ui/button/button.svelte';
+
 	let className: HTMLButtonAttributes['class'] = undefined;
 
 	export { className as class };
@@ -10,14 +12,11 @@
 	export let showSpinner: boolean | null = null;
 </script>
 
-<button
+<Button
 	{disabled}
 	type="submit"
 	aria-disabled={disabled}
-	class={cn(
-		'font-bold flex gap-2 items-center w-full border px-2 py-3 rounded-lg justify-center duration-300 transition-colors hover:bg-primary',
-		className
-	)}
+	class={cn('gap-2 font-medium text-xl', className)}
 >
 	{#if showSpinner === null ? disabled : showSpinner}
 		<iconify-icon icon="eos-icons:bubble-loading"></iconify-icon>
@@ -26,4 +25,4 @@
 	<span>
 		<slot>Submit</slot>
 	</span>
-</button>
+</Button>
