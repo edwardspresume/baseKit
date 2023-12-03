@@ -60,6 +60,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"bits-ui": "^0.9.9",
 		"clsx": "^2.0.0",
 		"dompurify": "^3.0.6",
 		"mode-watcher": "^0.1.2",

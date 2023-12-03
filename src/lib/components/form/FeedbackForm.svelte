@@ -55,8 +55,8 @@
 				name="message"
 				label="Message"
 				placeholder="Enter your message"
-				bind:value={$form.message}
-				errorMessage={$errors.message}
+				bind:value={$form['message']}
+				errorMessage={$errors['message']}
 			/>
 
 			<SubmitButton disabled={$delayed}>
