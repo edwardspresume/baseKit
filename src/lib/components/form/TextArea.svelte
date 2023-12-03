@@ -4,9 +4,12 @@
 	import type { EnterKeyHintType } from '$lib/types';
 	import { cn } from '$lib/utils/styleTransitionUtils';
 
+	import Label from '$components/ui/label/label.svelte';
+	import Textarea from '$components/ui/textarea/textarea.svelte';
+
 	let className: HTMLTextareaAttributes['class'] = undefined;
 	export { className as class };
-	export let value: string = '';
+	export let value: string | undefined = '';
 	export let name: string = '';
 	export let label: string = '';
 	export let placeholder: string = '';
@@ -15,12 +18,10 @@
 	export let maxlength: number | undefined = undefined;
 	export let errorMessage: object | undefined = undefined;
 
-	$: valueLength = value.length;
+	$: valueLength = value?.length || 0;
 </script>
 
-<label
-	class="grid gap-1 text-sm font-medium peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
->
+<Label class="grid gap-2">
 	<div>
 		<span>{label}</span>
 
@@ -35,9 +36,8 @@
 		<p class="text-red-500">{errorMessage}</p>
 	{/if}
 
-	<textarea
+	<Textarea
 		{name}
-		rows="5"
 		dir="auto"
 		bind:value
 		{maxlength}
@@ -45,8 +45,8 @@
 		{placeholder}
 		{enterkeyhint}
 		aria-label={label}
-		class={cn('bg-transparent border rounded-lg py-2 px-3 sm:py-4', className)}
+		class={cn(className)}
 		aria-invalid={errorMessage ? 'true' : undefined}
 		{...$$restProps}
 	/>
-</label>
+</Label>
