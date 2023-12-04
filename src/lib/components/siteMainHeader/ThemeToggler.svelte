@@ -1,8 +1,8 @@
 <script lang="ts">
+	import { resetMode, setMode } from 'mode-watcher';
+
 	import Button from '$components/ui/button/button.svelte';
 	import * as DropdownMenu from '$components/ui/dropdown-menu';
-
-	import { resetMode, setMode } from 'mode-watcher';
 </script>
 
 <DropdownMenu.Root positioning={{ placement: 'bottom-end' }}>
