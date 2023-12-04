@@ -22,7 +22,6 @@
 	},
 	"devDependencies": {
 		"@bobbymannino/svelte-progress": "^2.3.0",
-		"@fontsource/fira-mono": "^4.5.10",
 		"@playwright/test": "^1.40.1",
 		"@sveltejs/adapter-auto": "^2.1.1",
 		"@sveltejs/enhanced-img": "^0.1.5",
