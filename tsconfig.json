@@ -15,7 +15,6 @@
 		"noUnusedLocals": true,
 		"moduleDetection": "force",
 		"noUnusedParameters": true,
-		"verbatimModuleSyntax": true,
 		"noUncheckedIndexedAccess": true,
 		"noImplicitReturns": true,
 		"exactOptionalPropertyTypes": true,
