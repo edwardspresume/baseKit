@@ -1,5 +1,9 @@
 <script context="module" lang="ts">
+	import { writable } from 'svelte/store';
+
 	export const MAIN_NAV_ID: string = 'main_nav';
+
+	export const isSiteNavMenuOpen = writable(false);
 </script>
 
 <script lang="ts">
@@ -9,7 +13,7 @@
 	import { cn } from '$lib/utils/styleTransitionUtils';
 
 	import Button from '$components/ui/button/button.svelte';
-	import SiteMainNavMenuToggleBtn, { isSiteNavMenuOpen } from './SiteMainNavMenuToggleBtn.svelte';
+	import SiteMainNavMenuToggleBtn from './SiteMainNavMenuToggleBtn.svelte';
 
 	let className: HTMLAttributes<HTMLElement>['class'] = undefined;
 	export { className as class };
