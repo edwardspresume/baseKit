@@ -4,6 +4,7 @@
 	import FeedbackForm from '$components/form/FeedbackForm.svelte';
 	import Button from '$components/ui/button/button.svelte';
 	import SiteMainNav from './SiteMainNav.svelte';
+	import SiteMainNavMenuToggleBtn from './SiteMainNavMenuToggleBtn.svelte';
 	import ThemeToggler from './ThemeToggler.svelte';
 </script>
 
@@ -11,10 +12,12 @@
 	<div class="container flex items-center justify-between p-2">
 		<Button href={route('/')} variant="link" class="p-0 text-2xl font-bold">Logo</Button>
 
+		<SiteMainNav />
+
 		<div class="flex gap-2">
 			<FeedbackForm />
 			<ThemeToggler />
-			<SiteMainNav />
+			<SiteMainNavMenuToggleBtn />
 		</div>
 	</div>
 </header>
