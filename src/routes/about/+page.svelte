@@ -4,4 +4,4 @@
 	export let data: PageData;
 </script>
 
-<h1 class="text-2xl font-bold">Home page</h1>
+<h1 class="text-2xl font-bold">About page</h1>
