@@ -14,7 +14,7 @@
 
 <ModeWatcher />
 
-<div class="flex flex-col h-[100svh]">
+<div class="flex flex-col h-svh">
 	<SiteMainHeader />
 
 	<main class="container flex-1 p-2 pb-10">
