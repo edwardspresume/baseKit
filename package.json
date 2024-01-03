@@ -60,6 +60,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@vercel/analytics": "^1.1.1",
 		"bits-ui": "^0.9.9",
 		"clsx": "^2.1.0",
 		"dompurify": "^3.0.6",

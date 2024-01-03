@@ -1,4 +1,7 @@
 <script lang="ts">
+	import { dev } from '$app/environment';
+	import { inject } from '@vercel/analytics';
+
 	import '../app.pcss';
 
 	import { Toaster } from '$components/ui/sonner';
@@ -6,6 +9,8 @@
 	import { ModeWatcher } from 'mode-watcher';
 
 	import SiteMainHeader from '$components/siteMainHeader/SiteMainHeader.svelte';
+
+	inject({ mode: dev ? 'development' : 'production' });
 </script>
 
 <Bar color="#6D28D9" size="big" speed="fast" />
