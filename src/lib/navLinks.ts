@@ -32,7 +32,7 @@ export const createNavLink = (
 	return {
 		title,
 		href: path,
-		ariaLabel: ariaLabel || title,
+		ariaLabel: ariaLabel ?? title,
 		isExternal
 	};
 };
