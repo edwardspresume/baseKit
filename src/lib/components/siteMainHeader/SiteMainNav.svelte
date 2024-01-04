@@ -9,7 +9,7 @@
 <script lang="ts">
 	import type { HTMLAttributes } from 'svelte/elements';
 
-	import { route } from '$lib/ROUTES';
+	import { mainNavLinks } from '$lib/navLinks';
 	import { cn } from '$lib/utils/styleTransitionUtils';
 
 	import Button from '$components/ui/button/button.svelte';
@@ -32,12 +32,13 @@
 	aria-label="Main Navigation"
 	class={cn(staticClasses, dynamicClasses, className)}
 >
-	<ul class="grid gap-5 sm:gap-2 sm:flex *:*:w-full">
-		<li>
-			<Button href={route('/')} variant="outline">Home</Button>
-		</li>
-		<li>
-			<Button href={route('/about')} variant="outline">About</Button>
-		</li>
+	<ul class="grid gap-5 *:*:w-full sm:flex sm:gap-2">
+		{#each mainNavLinks as link}
+			<li>
+				<Button href={link.href} variant="outline" aria-label={link.ariaLabel}>
+					{link.title}
+				</Button>
+			</li>
+		{/each}
 	</ul>
 </nav>
