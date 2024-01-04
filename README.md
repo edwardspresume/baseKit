@@ -60,11 +60,15 @@ pnpm build
 
 - 📧 **[Nodemailer](https://nodemailer.com/about/)**: Allows sending emails directly from the application, enabling feedback and contact features.
 
+### Analytics
+
+- 📈**[@vercel/analytics](https://www.npmjs.com/package/@vercel/analytics)**: Analytics for Vercel projects.
+
 ### Components and Utilities
 
 - 🔔 **[Toast Notifications](https://github.com/wobsoriano/svelte-sonner)**: Toast notifications for user feedback and alerts.
 
-## Validation and Sanitization
+### Validation and Sanitization
 
 - 📝 **[SvelteKit Superforms](https://superforms.rocks/)**: A comprehensive solution for server and client validation, and client-side display of forms.
 - 🛡️ **[Zod](https://github.com/colinhacks/zod)**: TypeScript-first schema validation with static type inference.
@@ -82,7 +86,6 @@ pnpm build
 
 - **[@sveltejs/enhanced-img](https://www.npmjs.com/package/@sveltejs/enhanced-img)**: Experimental image optimization.
 - **[vite-plugin-kit-routes](https://www.npmjs.com/package/vite-plugin-kit-routes)**: Automatically updates route references in SvelteKit projects.
--
 
 ## Additions to the default SvelteKit TSConfig
 
