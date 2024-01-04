@@ -8,6 +8,8 @@
 	import { Bar } from '@bobbymannino/svelte-progress';
 	import { ModeWatcher } from 'mode-watcher';
 
+	import { siteMetaData } from '$lib/constants';
+
 	import SiteMainHeader from '$components/siteMainHeader/SiteMainHeader.svelte';
 
 	inject({ mode: dev ? 'development' : 'production' });
@@ -18,6 +20,11 @@
 <Toaster richColors closeButton />
 
 <ModeWatcher />
+
+<svelte:head>
+	<title>{siteMetaData.title}</title>
+	<meta name="description" content={siteMetaData.description} />
+</svelte:head>
 
 <div class="flex flex-col h-svh">
 	<SiteMainHeader />
@@ -32,7 +39,7 @@
 				Created by <a
 					href="https://twitter.com/edwardspresume"
 					target="_blank"
-					class="italic text-blue-400 hover:underline hover:text-blue-500">Edwards Presume</a
+					class="italic text-blue-400 hover:text-blue-500 hover:underline">Edwards Presume</a
 				>
 			</p>
 		</div>
