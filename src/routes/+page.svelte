@@ -6,6 +6,8 @@
 	import Button from '$components/ui/button/button.svelte';
 
 	export let data: PageData;
+
+	console.log(data);
 </script>
 
 <h1 class="text-2xl font-bold">Home page</h1>
