@@ -13,6 +13,7 @@
 
 		// Added by me
 		"noUnusedLocals": true,
+		"strictNullChecks": true,
 		"moduleDetection": "force",
 		"noUnusedParameters": true,
 		"noUncheckedIndexedAccess": true,
