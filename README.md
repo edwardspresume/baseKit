@@ -26,7 +26,7 @@ To start the development server, run:
 pnpm dev
 ```
 
-This will start the server and open the app in a new browser tab by visiting http://localhost:5173/. Changes in the code will automatically rebuild the app and refresh the page.
+This will start the server and open the app in a new browser tab, and navigate to: http://localhost:5173/. Changes in the code will automatically rebuild the app and refresh the page.
 
 ### Build
 
@@ -101,8 +101,20 @@ pnpm build
 
 When you use this template, try follow the checklist to update your info properly
 
-- [ ] Change the favicon in `static`
-- [ ] Add sitemap to `static`
+- [ ] Change the author name in `LICENSE`
+- [ ] Change the favicon in `static` dir
+- [ ] Add sitemap to `static` dir
 - [ ] Update `README.md`
 - [ ] Update project name in `package.json`
 - [ ] Add your email information to `.env` under `SECRET_GMAIL_PASS` and `SECRET_GMAIL_USERNAME` for Nodemailer configuration
+
+## Contributing
+
+I welcome contributions to this project! Here are some ways you can contribute:
+
+- **Issues**: Feel free to open an issue if you find a bug or want to suggest a feature. Please provide as much context as possible.
+- **Pull Requests**: If you're able to fix an issue or implement a feature, I'd love to see a pull request. Please ensure your code follows the existing style for this project.
+
+## License
+
+This project is licensed under the MIT License. This means you are free to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the software, under the conditions that you include the original copyright notice and disclaimers in any copies of the software or substantial portions of it. For more details, please see the [LICENSE](LICENSE) file.
