@@ -38,13 +38,13 @@
 </script>
 
 <label
-	class="relative grid gap-2 p-4 text-sm text-center transition-colors duration-300 border-2 border-dashed rounded-md border-foreground/30 place-content-center justify-items-center hover:bg-accent/40"
+	class="relative grid place-content-center justify-items-center gap-2 rounded-md border-2 border-dashed border-foreground/30 p-4 text-center text-sm transition-colors duration-300 hover:bg-accent/40"
 >
 	<input
 		type="file"
 		accept="image/*"
 		name="uploadedImage"
-		class="absolute top-0 left-0 opacity-0 cursor-pointer size-full"
+		class="absolute left-0 top-0 size-full cursor-pointer opacity-0"
 		data-testid="file-drop-zone-input"
 		on:change={handleImageUpload}
 	/>
@@ -53,7 +53,7 @@
 		<img
 			src={uploadedImageUrl}
 			alt="Uploaded Preview"
-			class="object-contain border rounded-md border-foreground/10 max-h-28"
+			class="max-h-28 rounded-md border border-foreground/10 object-contain"
 		/>
 	{:else}
 		<iconify-icon icon="flat-color-icons:add-image" class="text-5xl"></iconify-icon>

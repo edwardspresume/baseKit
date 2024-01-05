@@ -16,7 +16,7 @@
 	{disabled}
 	type="submit"
 	aria-disabled={disabled}
-	class={cn('gap-2 font-medium text-xl', className)}
+	class={cn('gap-2 text-xl font-medium', className)}
 >
 	{#if showSpinner === null ? disabled : showSpinner}
 		<iconify-icon icon="eos-icons:bubble-loading"></iconify-icon>

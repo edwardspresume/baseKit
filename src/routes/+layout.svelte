@@ -26,16 +26,16 @@
 	<meta name="description" content={siteMetaData.description} />
 </svelte:head>
 
-<div class="flex flex-col h-svh">
+<div class="flex h-svh flex-col">
 	<SiteMainHeader />
 
 	<main class="container flex-1 p-2 pb-10">
 		<slot />
 	</main>
 
-	<footer class="px-2 py-3 border-t">
+	<footer class="border-t px-2 py-3">
 		<div class="container mx-auto">
-			<p class="text-sm text-center">
+			<p class="text-center text-sm">
 				Created by <a
 					href="https://twitter.com/edwardspresume"
 					target="_blank"

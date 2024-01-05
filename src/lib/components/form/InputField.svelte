@@ -48,7 +48,7 @@
 		{autocomplete}
 		{enterkeyhint}
 		aria-label={label}
-		class={cn('bg-transparent border rounded py-2 px-3', className)}
+		class={cn('rounded border bg-transparent px-3 py-2', className)}
 		aria-invalid={errorMessage ? 'true' : undefined}
 		{...$$restProps}
 	/>
