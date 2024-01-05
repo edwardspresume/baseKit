@@ -36,3 +36,6 @@ jobs:
 
       - name: Run unit and e2e tests
         run: pnpm run tests
+        env:
+          SECRET_GMAIL_USERNAME: ${{ secrets.SECRET_GMAIL_USERNAME }}
+          SECRET_GMAIL_PASS: ${{ secrets.SECRET_GMAIL_PASS }}
