@@ -7,7 +7,7 @@ declare global {
 		// interface Error {}
 		// interface Locals {}
 		interface PageData {
-			pageMetaTags: MetaTagsProps;
+			pageMetaTags?: MetaTagsProps;
 		}
 		// interface PageState {}
 		// interface Platform {}
