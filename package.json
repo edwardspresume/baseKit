@@ -1,6 +1,7 @@
 {
-	"name": "sveltekit-starter-template",
+	"name": "base-kit",
 	"version": "0.0.1",
+	"packageManager": "pnpm@8.14.0",
 	"scripts": {
 		"knip": "knip",
 		"dev": "vite dev --host --open",
