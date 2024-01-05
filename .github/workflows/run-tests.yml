@@ -11,6 +11,9 @@ on:
 
 jobs:
   run-tests:
+    strategy:
+      matrix:
+        test: [unit, e2e]
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
@@ -29,6 +32,7 @@ jobs:
         run: pnpm install
 
       - name: Cache Playwright dependencies
+        if: matrix.test == 'e2e'
         uses: actions/cache@v3
         with:
           path: ~/.cache/ms-playwright/
@@ -37,13 +41,12 @@ jobs:
             ${{ runner.os }}-playwright-
 
       - name: Install Playwright dependencies
-        run: pnpm exec playwright install
+        if: matrix.test == 'e2e'
+        run: pnpm exec playwright install --with-deps chromium
 
-      - name: Install Playwright system dependencies
-        run: pnpm exec playwright install-deps
+      - name: 🏄 Copy test env vars
+        if: matrix.test == 'e2e'
+        run: cp .env.example .env
 
-      - name: Run unit and e2e tests
-        run: pnpm run tests
-        env:
-          SECRET_GMAIL_USERNAME: ${{ secrets.SECRET_GMAIL_USERNAME }}
-          SECRET_GMAIL_PASS: ${{ secrets.SECRET_GMAIL_PASS }}
+      - name: Run ${{ matrix.test }} tests
+        run: pnpm run test:${{ matrix.test }}
