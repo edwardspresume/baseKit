@@ -1,0 +1,38 @@
+name: Run tests
+
+on:
+  push:
+    branches:
+      - main
+      - dev
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  run-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: lts/*
+          cache: pnpm
+
+      - name: Install Dependencies
+        run: pnpm install
+
+      - name: Install Playwright dependencies
+        run: pnpm exec playwright install
+
+      - name: Install Playwright system dependencies
+        run: pnpm exec playwright install-deps
+
+      - name: Run unit and e2e tests
+        run: pnpm run tests
