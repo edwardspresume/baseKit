@@ -44,8 +44,15 @@ export function createBaseMetaTags(url: URL): MetaTagsProps {
 			imageAlt: 'Twitter image alt'
 		},
 		additionalLinkTags: [
-			{ rel: 'apple-touch-icon', href: '/favicons/apple-touch-icon.png' },
-			{ rel: 'icon', type: 'image/svg+xml', href: '/favicons/favicon.svg' },
+			{
+				rel: 'apple-touch-icon',
+				href: '/favicons/apple-touch-icon.png'
+			},
+			{
+				rel: 'icon',
+				type: 'image/svg+xml',
+				href: '/favicons/favicon.svg'
+			},
 			{
 				rel: 'manifest',
 				href: `/favicons/manifest.json`,
@@ -53,4 +60,8 @@ export function createBaseMetaTags(url: URL): MetaTagsProps {
 			}
 		]
 	};
+}
+
+export function createPageMetaTags(metaTags: MetaTagsProps): MetaTagsProps {
+	return metaTags;
 }
