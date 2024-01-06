@@ -60,9 +60,10 @@ pnpm build
 
 - 📧 **[Nodemailer](https://nodemailer.com/about/)**: Allows sending emails directly from the application, enabling feedback and contact features.
 
-### Analytics
+### Analytics and SEO
 
 - 📈**[@vercel/analytics](https://www.npmjs.com/package/@vercel/analytics)**: Analytics for Vercel projects.
+- 🌐 **[svelte-meta-tags](https://github.com/oekazuma/svelte-meta-tags)**: This project uses svelte-meta-tags for managing SEO meta tags.
 
 ### Components and Utilities
 
@@ -76,6 +77,7 @@ pnpm build
 
 ### Code Quality and Testing
 
+- 🤖 **[GitHub Actions](https://github.com/features/actions)**: This repository includes a GitHub action for continuous integration/continuous deployment (CI/CD) workflows.
 - 🗑️ **[Knip](https://www.npmjs.com/package/knip)**: Finds unused files, dependencies, and exports in projects.
 - 🛠️ **[ESLint](https://eslint.org/)** & **✨ [Prettier](https://prettier.io/)**: Code quality tools.
 - 🧪 **Testing**: Unit tests with [Vitest](https://vitest.dev/), E2E tests with [Playwright](https://playwright.dev/).
@@ -104,7 +106,8 @@ pnpm build
 
 When you use this template, try follow the checklist to update your info properly
 
-- [ ] Change the author name in `LICENSE`
+- [ ] Update GitHub action workflows as necessary
+- [ ] Update `LICENSE` as you see fit
 - [ ] Change the favicon in `static` dir
 - [ ] Add sitemap to `static` dir
 - [ ] Update `README.md`
