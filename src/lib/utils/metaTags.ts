@@ -70,7 +70,7 @@ export function createBaseMetaTags(url: URL): MetaTagsProps {
 			},
 			{
 				rel: 'manifest',
-				href: `/favicons/manifest.json`,
+				href: `/site.webmanifest`,
 				crossOrigin: 'use-credentials'
 			}
 		]
