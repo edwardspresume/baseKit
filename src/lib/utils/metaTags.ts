@@ -1,13 +1,16 @@
 import type { MetaTagsProps } from 'svelte-meta-tags';
 
 export function createBaseMetaTags(url: URL): MetaTagsProps {
+	const title = 'BaseKit test1';
+	const description = 'BaseKit is a SvelteKit template with pre-configured tools.';
 	const canonicalUrl = new URL(url.pathname, url.origin).href;
 
 	return {
-		title: 'BaseKit',
+		title: title,
 		titleTemplate: '%s | Your Project Tagline',
-		description: 'BaseKit is a SvelteKit template with pre-configured tools.',
+		description: description,
 		canonical: canonicalUrl,
+
 		keywords: [
 			'Basekit',
 			'sveltekit',
@@ -16,12 +19,13 @@ export function createBaseMetaTags(url: URL): MetaTagsProps {
 			'svelte-sonner',
 			'svelte-meta-tags'
 		],
+
 		openGraph: {
 			type: 'website',
 			url: canonicalUrl,
 			locale: 'en_IE',
-			title: 'Open Graph Title',
-			description: 'Open Graph Description',
+			title: title,
+			description: description,
 			siteName: 'BaseKit',
 			images: [
 				{
@@ -34,15 +38,17 @@ export function createBaseMetaTags(url: URL): MetaTagsProps {
 				}
 			]
 		},
+
 		twitter: {
 			handle: '@edwardspresume',
-			site: '@site',
+			site: canonicalUrl,
 			cardType: 'summary_large_image',
-			title: 'Using More of Config',
-			description: 'This example uses more of the available config options.',
+			title: title,
+			description: description,
 			image: 'https://www.example.ie/twitter-image.jpg',
 			imageAlt: 'Twitter image alt'
 		},
+
 		additionalLinkTags: [
 			{
 				rel: 'apple-touch-icon',
@@ -63,5 +69,18 @@ export function createBaseMetaTags(url: URL): MetaTagsProps {
 }
 
 export function createPageMetaTags(metaTags: MetaTagsProps): MetaTagsProps {
-	return metaTags;
+	const title = metaTags.title ?? '';
+	const description = metaTags.description ?? '';
+
+	return {
+		...metaTags,
+		openGraph: {
+			title: metaTags.openGraph?.title ?? title,
+			description: metaTags.openGraph?.description ?? description
+		},
+		twitter: {
+			title: metaTags.twitter?.title ?? title,
+			description: metaTags.twitter?.description ?? description
+		}
+	};
 }
