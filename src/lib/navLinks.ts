@@ -27,11 +27,7 @@ export const createNavLink = (
 	};
 };
 
-const linkData = [
-	{ title: 'Home', href: route('/'), ariaLabel: 'Go to homepage' },
-	{ title: 'About', href: route('/about'), ariaLabel: 'Go to about page' }
-];
-
-export const mainNavLinks: NavLink[] = linkData.map((link) =>
-	createNavLink(link.title, link.href, link.ariaLabel)
-);
+export const mainNavLinks = {
+	home: createNavLink('Home', route('/'), 'Go to homepage'),
+	about: createNavLink('About', route('/about'), 'Go to about page')
+} as const;
