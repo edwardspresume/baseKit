@@ -9,12 +9,7 @@ export type NavLink = {
 	isExternal?: boolean;
 };
 
-export const createNavLink = (
-	title: string,
-	href: string,
-	ariaLabel: AriaAttributes['aria-label'] = title,
-	isExternal: boolean = false
-) => {
+export const createNavLink = ({ title, href, ariaLabel, isExternal }: NavLink) => {
 	if (!title || !href) {
 		throw new Error('Title and href are required to create a NavLink');
 	}
@@ -22,12 +17,21 @@ export const createNavLink = (
 	return {
 		title,
 		href,
-		ariaLabel,
+		ariaLabel: ariaLabel ?? title,
 		isExternal
 	};
 };
 
 export const mainNavLinks = {
-	home: createNavLink('Home', route('/'), 'Go to homepage'),
-	about: createNavLink('About', route('/about'), 'Go to about page')
+	home: createNavLink({
+		title: 'Home',
+		href: route('/'),
+		ariaLabel: 'Go to home page'
+	}),
+
+	about: createNavLink({
+		title: 'About',
+		href: route('/about'),
+		ariaLabel: 'Go to about page'
+	})
 } as const;
