@@ -60,6 +60,15 @@ export function createBaseMetaTags(url: URL): MetaTagsProps {
 				href: '/favicons/favicon.svg'
 			},
 			{
+				rel: 'mask-icon',
+				href: '/favicons/mask-icon.svg'
+			},
+			{
+				rel: 'alternate icon',
+				type: 'image/png',
+				href: '/favicons/favicon-32x32.png'
+			},
+			{
 				rel: 'manifest',
 				href: `/favicons/manifest.json`,
 				crossOrigin: 'use-credentials'
