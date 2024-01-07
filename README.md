@@ -112,6 +112,7 @@ When you use this template, try follow the checklist to update your info properl
 - [ ] Add sitemap to `static` dir
 - [ ] Update `README.md`
 - [ ] Update project name in `package.json`
+- [ ] Update site name in `static/site.webmanifest`
 - [ ] Add your email information to `.env` under `SECRET_GMAIL_PASS` and `SECRET_GMAIL_USERNAME` for Nodemailer configuration
 
 ## Contributing
