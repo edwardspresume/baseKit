@@ -47,3 +47,11 @@ jobs:
 
       - name: Run ${{ matrix.test }} tests
         run: pnpm run test:${{ matrix.test }}
+
+      - name: Upload test artifacts
+        if: matrix.test == 'e2e' && always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: playwright-report
+          path: playwright-report/
+          retention-days: 30
