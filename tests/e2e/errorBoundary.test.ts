@@ -8,7 +8,7 @@ test('Test root error boundary catches errors', async ({ page }) => {
 	// Check if the response is a 404
 	expect(response?.status()).toBe(404);
 
-	const pageHeading = page.locator('text="404 - Page Not Found22"');
+	const pageHeading = page.locator('text="404 - Page Not Found"');
 
 	// Check if the page heading is visible
 	expect(await pageHeading.isVisible()).toBe(true);
