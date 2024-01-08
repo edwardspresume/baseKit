@@ -2,7 +2,7 @@ import { z } from 'zod';
 
 export const MAX_FILE_SIZE_MB = 20;
 
-export const supportedImageTypes = [
+export const SUPPORTED_IMAGE_TYPES = [
 	'image/jpeg',
 	'image/png',
 	'image/webp',
@@ -11,12 +11,12 @@ export const supportedImageTypes = [
 ];
 
 export const IMAGE_VALIDATION_ERROR_MESSAGES = {
-	noFileUploaded: 'No file uploaded',
-	notAnImage: 'Uploaded file is not an image',
-	unsupportedImageType: `Unsupported image type. Supported types are: ${Object.values(
-		supportedImageTypes
-	).join(', ')}.`,
-	fileTooLarge: `File size must be less than ${MAX_FILE_SIZE_MB} MB.`
+    noFileUploaded: 'Please upload a file.',
+    notAnImage: 'The file you uploaded is not an image.',
+    unsupportedImageType: `The image type you uploaded is not supported. Please upload an image of one of the following types: ${Object.values(
+        SUPPORTED_IMAGE_TYPES
+    ).join(', ')}.`,
+    fileTooLarge: `The file size must be less than ${MAX_FILE_SIZE_MB} MB.`
 };
 
 export const imageValidationSchema = z.object({
@@ -24,7 +24,7 @@ export const imageValidationSchema = z.object({
 		.instanceof(File)
 		.refine((file) => file.size > 0, IMAGE_VALIDATION_ERROR_MESSAGES.noFileUploaded)
 		.refine((file) => file.type.startsWith('image/'), IMAGE_VALIDATION_ERROR_MESSAGES.notAnImage)
-		.refine((file) => supportedImageTypes.includes(file.type), {
+		.refine((file) => SUPPORTED_IMAGE_TYPES.includes(file.type), {
 			message: IMAGE_VALIDATION_ERROR_MESSAGES.unsupportedImageType
 		})
 		.refine((file) => file.size <= MAX_FILE_SIZE_MB * 1024 * 1024, {
