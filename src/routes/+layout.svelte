@@ -28,19 +28,19 @@
 <MetaTags {...metaTags} />
 
 <Bar color="#6D28D9" size="big" speed="fast" />
-<Toaster richColors closeButton />
+<Toaster richColors closeButton position={'top-center'} />
 <ModeWatcher />
 
-<div class="flex h-svh flex-col">
+<div class="flex flex-col h-svh">
 	<SiteMainHeader />
 
 	<main class="container flex-1 p-2 pb-10">
 		<slot />
 	</main>
 
-	<footer class="border-t px-2 py-3">
+	<footer class="px-2 py-3 border-t">
 		<div class="container mx-auto">
-			<p class="text-center text-sm">
+			<p class="text-sm text-center">
 				Created by <a
 					href="https://twitter.com/edwardspresume"
 					target="_blank"
