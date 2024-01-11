@@ -6,7 +6,7 @@
 
 	let className: HTMLInputAttributes['class'] = undefined;
 	export { className as class };
-	export let type: string;
+	export let type: HTMLInputAttributes['type'];
 	export let value: string | null | undefined = '';
 	export let name: string = '';
 	export let label: string = '';
