@@ -26,7 +26,6 @@
 	const staticClasses =
 		'absolute left-0 z-50 w-full px-4 pt-10 transition-transform duration-300 top-full h-svh sm:h-full sm:relative sm:w-fit sm:-translate-x-0 sm:p-0 bg-secondary sm:bg-transparent';
 
-	console.log('mainNavLinks', mainNavLinks);
 </script>
 
 <nav
