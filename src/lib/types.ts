@@ -1,12 +1,5 @@
-export enum AlertType {
-	SUCCESS = 'success',
-	ERROR = 'error',
-	WARNING = 'warning',
-	INFO = 'info'
-}
-
 export type AlertMessageType = {
-	alertType: AlertType;
+	alertType: 'success' | 'error' | 'warning' | 'info';
 	alertText: string;
 };
 
