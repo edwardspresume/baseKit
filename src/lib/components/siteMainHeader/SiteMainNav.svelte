@@ -43,7 +43,7 @@
 					variant="outline"
 					aria-label={link.ariaLabel}
 					aria-current={isCurrentPage}
-					class={isCurrentPage ? 'text-primary-foreground' : ''}
+					class={!isCurrentPage ? 'text-primary-foreground' : ''}
 				>
 					{link.title}
 				</Button>
