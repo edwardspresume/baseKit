@@ -1,7 +1,7 @@
 import type { MetaTagsProps } from 'svelte-meta-tags';
 
 export function createBaseMetaTags(url: URL): MetaTagsProps {
-	const title = 'BaseKit test1';
+	const title = 'BaseKit';
 	const description = 'BaseKit is a SvelteKit template with pre-configured tools.';
 	const canonicalUrl = new URL(url.pathname, url.origin).href;
 
