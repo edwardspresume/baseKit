@@ -15,11 +15,12 @@
 		"test:e2e": "playwright test",
 		"test:unit": "vitest -u",
 		"test:unit:ui": "vitest --ui",
-		"migration:generate": "drizzle-kit generate:pg",
-		"migration:push": "drizzle-kit push:pg",
-		"migration:pull": "drizzle-kit introspect:pg",
-		"migration:drop": "drizzle-kit drop",
-		"migration:check": "drizzle-kit check:pg"
+		"db:generate": "drizzle-kit generate:sqlite",
+		"db:push": "drizzle-kit push:sqlite",
+		"db:pull": "drizzle-kit introspect:sqlite",
+		"db:drop": "drizzle-kit drop",
+		"db:check": "drizzle-kit check:sqlite",
+		"db:studio": "drizzle-kit studio"
 	},
 	"devDependencies": {
 		"@bobbymannino/svelte-progress": "^2.3.0",
