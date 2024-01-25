@@ -1,5 +1,5 @@
+import { route } from '$lib/ROUTES';
 import type { AriaAttributes } from 'svelte/elements';
-import { route } from './ROUTES';
 
 // Type for navigation link
 export type NavLink = {

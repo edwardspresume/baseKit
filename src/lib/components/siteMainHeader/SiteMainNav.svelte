@@ -10,7 +10,7 @@
 	import { page } from '$app/stores';
 	import type { HTMLAttributes } from 'svelte/elements';
 
-	import { mainNavLinks } from '$lib/navLinks';
+	import { mainNavLinks } from '$lib/utils/navLinks';
 	import { cn } from '$lib/utils/styleTransitionUtils';
 
 	import Button from '$components/ui/button/button.svelte';
