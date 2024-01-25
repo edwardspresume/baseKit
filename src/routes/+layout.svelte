@@ -2,6 +2,10 @@
 	import { dev } from '$app/environment';
 	import { page } from '$app/stores';
 
+	import { getFlash } from 'sveltekit-flash-message';
+
+	import { toast } from 'svelte-sonner';
+
 	import { inject } from '@vercel/analytics';
 
 	import { Toaster } from '$components/ui/sonner';
@@ -17,6 +21,12 @@
 	import SiteMainHeader from '$components/siteMainHeader/SiteMainHeader.svelte';
 
 	export let data;
+
+	const flash = getFlash(page);
+
+	$: if ($flash) {
+		toast.info($flash.message);
+	}
 
 	inject({ mode: dev ? 'development' : 'production' });
 
