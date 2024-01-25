@@ -75,6 +75,11 @@ pnpm build
 - 🛡️ **[Zod](https://github.com/colinhacks/zod)**: TypeScript-first schema validation with static type inference.
 - 🧼 **[DOMPurify](https://github.com/cure53/DOMPurify)**: Sanitizes HTML and prevents XSS attacks.
 
+
+### Database and ORM
+
+- 🌧️ **[Drizzle ORM](https://orm.drizzle.team/)**: Headless TypeScript ORM
+
 ### Code Quality and Testing
 
 - 🤖 **[GitHub Actions](https://github.com/features/actions)**: This repository includes a GitHub action for continuous integration/continuous deployment (CI/CD) workflows.
