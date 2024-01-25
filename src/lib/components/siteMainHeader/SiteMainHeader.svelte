@@ -12,9 +12,8 @@
 	<div class="container flex items-center justify-between p-2">
 		<Button href={route('/')} variant="link" class="p-0 text-2xl font-bold">Logo</Button>
 
-		<SiteMainNav />
-
 		<div class="flex gap-2">
+			<SiteMainNav />
 			<FeedbackForm />
 			<ThemeToggler />
 			<SiteMainNavMenuToggleBtn />
