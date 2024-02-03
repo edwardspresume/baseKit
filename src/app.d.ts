@@ -8,6 +8,8 @@ declare global {
 		// interface Locals {}
 		interface PageData {
 			pageMetaTags?: MetaTagsProps;
+			isUserLoggedIn: boolean;
+			flash?: { type: 'success' | 'error'; message: string };
 		}
 		// interface PageState {}
 		// interface Platform {}
