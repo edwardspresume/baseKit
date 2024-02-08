@@ -17,6 +17,6 @@
 
 		<Button href={route('/')} class="w-fit">Go to Home Page</Button>
 	{:else}
-		<h1>{$page.status}: {$page.error?.message}</h1>
+		<h1 class="text-2xl font-bold">{$page.status}: {$page.error?.message}</h1>
 	{/if}
 </div>
