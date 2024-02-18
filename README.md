@@ -26,7 +26,7 @@ To start the development server, run:
 pnpm dev
 ```
 
-This will start the server and open the app in a new browser tab, and navigate to: http://localhost:5173/. Changes in the code will automatically rebuild the app and refresh the page.
+This will start the server and open the app in a new browser tab, and navigate to: <http://localhost:5173/>. Changes in the code will automatically rebuild the app and refresh the page.
 
 ### Build
 
@@ -74,7 +74,6 @@ pnpm build
 - 📝 **[SvelteKit Superforms](https://superforms.rocks/)**: A comprehensive solution for server and client validation, and client-side display of forms.
 - 🛡️ **[Zod](https://github.com/colinhacks/zod)**: TypeScript-first schema validation with static type inference.
 - 🧼 **[DOMPurify](https://github.com/cure53/DOMPurify)**: Sanitizes HTML and prevents XSS attacks.
-
 
 ### Database and ORM
 
