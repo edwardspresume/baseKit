@@ -1,7 +1,8 @@
 import type { LayoutServerLoad } from './$types';
 
 import { loadFlash } from 'sveltekit-flash-message/server';
-import { superValidate } from 'sveltekit-superforms/server';
+import { superValidate } from 'sveltekit-superforms';
+import { zod } from 'sveltekit-superforms/adapters';
 
 import { createBaseMetaTags } from '$lib/utils/metaTags';
 
@@ -12,6 +13,6 @@ export const load = loadFlash(async ({ url }) => {
 
 	return {
 		baseMetaTags: Object.freeze(baseMetaTags),
-		feedbackForm: await superValidate(FeedbackValidationSchema)
+		feedbackForm: await superValidate(zod(FeedbackValidationSchema))
 	};
 }) satisfies LayoutServerLoad;
