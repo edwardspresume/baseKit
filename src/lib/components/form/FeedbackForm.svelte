@@ -1,7 +1,8 @@
 <script lang="ts">
 	import { page } from '$app/stores';
 
-	import { superForm } from 'sveltekit-superforms/client';
+	import { superForm } from 'sveltekit-superforms';
+	import { zodClient } from 'sveltekit-superforms/adapters';
 
 	import { toast } from 'svelte-sonner';
 
@@ -16,9 +17,7 @@
 
 	const { enhance, form, errors, message, delayed } = superForm($page.data['feedbackForm'], {
 		id: 'feedbackForm',
-		resetForm: true,
-		taintedMessage: null,
-		validators: FeedbackValidationSchema,
+		validators: zodClient(FeedbackValidationSchema),
 
 		onUpdated: () => {
 			if (!$message) return;
