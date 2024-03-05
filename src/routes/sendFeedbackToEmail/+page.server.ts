@@ -3,7 +3,13 @@ import type { Actions } from './$types';
 
 import nodemailer from 'nodemailer';
 
-import { message, superValidate } from 'sveltekit-superforms/server';
+import { zod } from 'sveltekit-superforms/adapters';
+import {
+	message,
+	superValidate,
+	type Infer,
+	type SuperValidated
+} from 'sveltekit-superforms/server';
 
 import type { AlertMessageType } from '$lib/types';
 
@@ -40,11 +46,16 @@ async function sendEmail(mailOptions: object) {
 	return emailTransporter.sendMail(mailOptions);
 }
 
+type FeedbackFormValidateType = SuperValidated<
+	Infer<FeedbackValidationSchemaType>,
+	AlertMessageType
+>;
+
 export const actions: Actions = {
 	default: async ({ request }) => {
-		const feedbackForm = await superValidate<FeedbackValidationSchemaType, AlertMessageType>(
+		const feedbackForm: FeedbackFormValidateType = await superValidate(
 			request,
-			FeedbackValidationSchema
+			zod(FeedbackValidationSchema)
 		);
 
 		if (!feedbackForm.valid) {
