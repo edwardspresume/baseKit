@@ -8,7 +8,7 @@ import { message, superValidate } from 'sveltekit-superforms/server';
 
 import { logError, sanitizeContent } from '$lib/utils';
 
-import { FeedbackValidationSchema } from '$validations/feedbackValidationZodSchema';
+import { FeedbackValidationZodSchema } from '$validations/feedbackValidationZodSchema';
 
 /**
  * Creates a nodemailer Transporter instance
@@ -38,7 +38,7 @@ async function sendEmail(mailOptions: object) {
 
 export const actions: Actions = {
 	default: async ({ request }) => {
-		const feedbackForm = await superValidate(request, zod(FeedbackValidationSchema));
+		const feedbackForm = await superValidate(request, zod(FeedbackValidationZodSchema));
 
 		if (!feedbackForm.valid) {
 			return message(feedbackForm, {

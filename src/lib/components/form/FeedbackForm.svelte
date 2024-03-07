@@ -6,7 +6,7 @@
 
 	import { toast } from 'svelte-sonner';
 
-	import { FeedbackValidationSchema } from '$validations/feedbackValidationZodSchema';
+	import { FeedbackValidationZodSchema } from '$validations/feedbackValidationZodSchema';
 
 	import { route } from '$lib/ROUTES';
 
@@ -17,7 +17,7 @@
 
 	const { enhance, form, errors, message, delayed } = superForm($page.data['feedbackForm'], {
 		id: 'feedbackForm',
-		validators: zodClient(FeedbackValidationSchema),
+		validators: zodClient(FeedbackValidationZodSchema),
 
 		onUpdated: () => {
 			if (!$message) return;
