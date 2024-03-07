@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { toast } from 'svelte-sonner';
 
-	import { MAX_FILE_SIZE_MB, imageValidationSchema } from '$validations/imageValidationSchema';
+	import { MAX_FILE_SIZE_MB, imageValidationSchema } from '$validations/imageValidationZodSchema';
 
 	let uploadedImageUrl: string | null = null;
 
