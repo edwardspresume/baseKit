@@ -13,7 +13,7 @@ export const IMAGE_VALIDATION_ERROR_MESSAGES = {
 	fileTooLarge: `The file size must be less than ${MAX_FILE_SIZE_MB} MB.`
 };
 
-export const imageValidationSchema = z.object({
+export const imageValidationZodSchema = z.object({
 	uploadedImage: z
 		.instanceof(File)
 		.refine((file) => file.size > 0, IMAGE_VALIDATION_ERROR_MESSAGES.noFileUploaded)

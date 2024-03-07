@@ -1,7 +1,10 @@
 <script lang="ts">
 	import { toast } from 'svelte-sonner';
 
-	import { MAX_FILE_SIZE_MB, imageValidationSchema } from '$validations/imageValidationZodSchema';
+	import {
+		MAX_FILE_SIZE_MB,
+		imageValidationZodSchema
+	} from '$validations/imageValidationZodSchema';
 
 	let uploadedImageUrl: string | null = null;
 
@@ -10,7 +13,7 @@
 
 		if (input.files?.[0]) {
 			const file = input.files[0];
-			const imageValidationResult = imageValidationSchema.safeParse({ uploadedImage: file });
+			const imageValidationResult = imageValidationZodSchema.safeParse({ uploadedImage: file });
 
 			if (!imageValidationResult.success) {
 				const errorMessage =
