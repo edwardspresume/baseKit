@@ -1,8 +1,3 @@
-export type AlertMessageType = {
-	alertType: 'success' | 'error' | 'warning' | 'info';
-	alertText: string;
-};
-
 export type EnterKeyHintType =
 	| 'search'
 	| 'enter'
