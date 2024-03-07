@@ -8,7 +8,7 @@ import { message, superValidate } from 'sveltekit-superforms/server';
 
 import { logError, sanitizeContent } from '$lib/utils';
 
-import { FeedbackValidationSchema } from '$validations/feedbackValidationSchema';
+import { FeedbackValidationSchema } from '$validations/feedbackValidationZodSchema';
 
 /**
  * Creates a nodemailer Transporter instance

@@ -6,7 +6,7 @@
 
 	import { toast } from 'svelte-sonner';
 
-	import { FeedbackValidationSchema } from '$validations/feedbackValidationSchema';
+	import { FeedbackValidationSchema } from '$validations/feedbackValidationZodSchema';
 
 	import { route } from '$lib/ROUTES';
 
