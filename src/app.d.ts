@@ -9,7 +9,7 @@ declare global {
 		// interface Locals {}
 		interface PageData {
 			pageMetaTags?: MetaTagsProps;
-			isUserLoggedIn: boolean;
+			isUserLoggedIn?: boolean;
 			flash?: { type: 'success' | 'error'; message: string };
 		}
 		// interface PageState {}
@@ -24,4 +24,4 @@ declare global {
 	}
 }
 
-export {};
+export { };
