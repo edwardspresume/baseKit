@@ -16,5 +16,7 @@ export default {
 	driver: 'better-sqlite',
 	dbCredentials: {
 		url: LOCAL_DATABASE_URL
-	}
+	},
+	strict: true,
+	verbose: true
 } satisfies Config;
