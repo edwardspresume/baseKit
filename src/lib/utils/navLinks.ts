@@ -9,6 +9,10 @@ export type NavLink = {
 	isExternal?: boolean;
 };
 
+export type NavLinks = {
+	[key: string]: NavLink;
+};
+
 export const createNavLink = ({ title, href, ariaLabel, isExternal }: NavLink) => {
 	if (!title || !href) {
 		throw new Error('Title and href are required to create a NavLink');
@@ -18,7 +22,7 @@ export const createNavLink = ({ title, href, ariaLabel, isExternal }: NavLink) =
 		title,
 		href,
 		ariaLabel: ariaLabel ?? title,
-		isExternal
+		isExternal: isExternal ?? false
 	};
 };
 

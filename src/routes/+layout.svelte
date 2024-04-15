@@ -16,6 +16,9 @@
 	import extend from 'just-extend';
 	import { MetaTags } from 'svelte-meta-tags';
 
+	import { route } from '$lib/ROUTES';
+	import { mainNavLinks } from '$lib/utils/navLinks';
+
 	import '../app.pcss';
 
 	import SiteMainHeader from '$components/siteMainHeader/SiteMainHeader.svelte';
@@ -42,7 +45,7 @@
 <ModeWatcher />
 
 <div class="flex flex-col h-svh">
-	<SiteMainHeader />
+	<SiteMainHeader heading="Logo" headingHref={route('/')} navLinks={mainNavLinks} />
 
 	<main class="container flex-1 p-2 pb-10">
 		<slot />

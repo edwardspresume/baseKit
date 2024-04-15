@@ -1,20 +1,24 @@
-<script>
-	import { route } from '$lib/ROUTES';
+<script lang="ts">
+	import type { NavLinks } from '$lib/utils/navLinks';
 
-	import FeedbackForm from '$components/form/FeedbackForm.svelte';
 	import Button from '$components/ui/button/button.svelte';
 	import SiteMainNav from './SiteMainNav.svelte';
 	import SiteMainNavMenuToggleBtn from './SiteMainNavMenuToggleBtn.svelte';
 	import ThemeToggler from './ThemeToggler.svelte';
+
+	export let heading: string;
+	export let headingHref: string;
+	export let navLinks: NavLinks;
 </script>
 
-<header class="relative mb-10 border-b">
+<header class="relative mb-10 border-b border-accent-foreground/10">
 	<div class="container flex items-center justify-between p-2">
-		<Button href={route('/')} variant="link" class="p-0 text-2xl font-bold">Logo</Button>
+		<Button href={headingHref} variant="link" class="p-0 text-2xl font-bold">
+			{heading}
+		</Button>
 
 		<div class="flex gap-2">
-			<SiteMainNav />
-			<FeedbackForm />
+			<SiteMainNav {navLinks} />
 			<ThemeToggler />
 			<SiteMainNavMenuToggleBtn />
 		</div>
