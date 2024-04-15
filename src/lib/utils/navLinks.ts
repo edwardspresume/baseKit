@@ -1,7 +1,6 @@
 import { route } from '$lib/ROUTES';
 import type { AriaAttributes } from 'svelte/elements';
 
-// Type for navigation link
 export type NavLink = {
 	href: string;
 	title: string;
@@ -13,29 +12,53 @@ export type NavLinks = {
 	[key: string]: NavLink;
 };
 
-export const createNavLink = ({ title, href, ariaLabel, isExternal }: NavLink) => {
+export const createNavLink = ({ title, href, ariaLabel, isExternal }: Partial<NavLink>) => {
 	if (!title || !href) {
-		throw new Error('Title and href are required to create a NavLink');
+		throw new Error(
+			`Title and href are required to create a NavLink. Received title: ${title}, href: ${href}`
+		);
 	}
+
+	ariaLabel = ariaLabel ?? `Go to ${title.toLowerCase()} page`;
 
 	return {
 		title,
 		href,
-		ariaLabel: ariaLabel ?? title,
+		ariaLabel,
 		isExternal: isExternal ?? false
 	};
 };
 
-export const mainNavLinks = {
-	home: createNavLink({
-		title: 'Home',
-		href: route('/'),
-		ariaLabel: 'Go to home page'
+export const visitorAndEmployeePageNavLinks = {
+	checkIn: createNavLink({
+		title: 'Check In',
+		href: route('/')
 	}),
 
-	about: createNavLink({
-		title: 'About',
-		href: route('/about'),
-		ariaLabel: 'Go to about page'
+	checkOut: createNavLink({
+		title: 'Check Out',
+		href: route('/check-out')
+	}),
+
+	employeeCovidScreening: createNavLink({
+		title: 'Employee Covid Screening',
+		href: route('/employee-covid-screening')
+	})
+} as const;
+
+export const adminPagesNavLinks = {
+	visitorsLog: createNavLink({
+		title: 'Visitor Log',
+		href: route('/admin')
+	}),
+
+	employeeCovidScreening: createNavLink({
+		title: 'Employee Covid Screening',
+		href: route('/admin/employee-covid-screening')
+	}),
+
+	allowedVisitors: createNavLink({
+		title: 'Allowed Visitors',
+		href: route('/admin/allowed-visitors')
 	})
 } as const;
