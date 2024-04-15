@@ -29,36 +29,14 @@ export const createNavLink = ({ title, href, ariaLabel, isExternal }: Partial<Na
 	};
 };
 
-export const visitorAndEmployeePageNavLinks = {
-	checkIn: createNavLink({
-		title: 'Check In',
+export const mainNavLinks = {
+	home: createNavLink({
+		title: 'Home',
 		href: route('/')
 	}),
 
-	checkOut: createNavLink({
-		title: 'Check Out',
-		href: route('/check-out')
-	}),
-
-	employeeCovidScreening: createNavLink({
-		title: 'Employee Covid Screening',
-		href: route('/employee-covid-screening')
-	})
-} as const;
-
-export const adminPagesNavLinks = {
-	visitorsLog: createNavLink({
-		title: 'Visitor Log',
-		href: route('/admin')
-	}),
-
-	employeeCovidScreening: createNavLink({
-		title: 'Employee Covid Screening',
-		href: route('/admin/employee-covid-screening')
-	}),
-
-	allowedVisitors: createNavLink({
-		title: 'Allowed Visitors',
-		href: route('/admin/allowed-visitors')
+	about: createNavLink({
+		title: 'About',
+		href: route('/about')
 	})
 } as const;
