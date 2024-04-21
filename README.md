@@ -2,6 +2,8 @@
 
 This starter template is designed for developers looking to jumpstart their [SvelteKit](https://kit.svelte.dev/) projects. It comes pre-configured with a suite of tools in aim to enforce best practices and ensure high-quality, maintainable code.
 
+To speed up initial setup and not have deployment hassles, the unit and end-to-end (2e2) starter tests and GitHub action workflows have been removed from the main branch but retained in the [with_tests branch](https://github.com/edwardspresume/baseKit/tree/with_tests) for reference.
+
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
