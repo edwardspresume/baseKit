@@ -24,13 +24,7 @@
 
 			const { alertType, alertText } = $message;
 
-			if (alertType === 'error') {
-				toast.error(alertText);
-			}
-
-			if (alertType === 'success') {
-				toast.success(alertText);
-			}
+			toast[alertType](alertText);
 		}
 	});
 </script>
