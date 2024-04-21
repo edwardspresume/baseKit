@@ -29,7 +29,6 @@
 			name="image"
 			accept="image/*"
 			on:input={handleImageUpload}
-			data-testId="file-drop-zone-input"
 			aria-invalid={errorMessage ? 'true' : undefined}
 			class="absolute top-0 left-0 opacity-0 cursor-pointer size-full"
 		/>
