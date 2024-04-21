@@ -4,10 +4,5 @@ import { kitRoutes } from 'vite-plugin-kit-routes';
 import { defineConfig } from 'vitest/config';
 
 export default defineConfig({
-	plugins: [enhancedImages(), sveltekit(), kitRoutes()],
-	test: {
-		globals: true,
-		environment: 'jsdom',
-		include: ['tests/unit/**/*.{test,spec}.{js,ts}']
-	}
+	plugins: [enhancedImages(), sveltekit(), kitRoutes()]
 });
