@@ -6,13 +6,13 @@ import { zod } from 'sveltekit-superforms/adapters';
 
 import { createBaseMetaTags } from '$lib/utils/metaTags';
 
-import { FeedbackValidationSchema } from '$validations/feedbackValidationSchema';
+import { FeedbackValidationZodSchema } from '$validations/feedbackValidationZodSchema';
 
 export const load = loadFlash(async ({ url }) => {
 	const baseMetaTags = createBaseMetaTags(url);
 
 	return {
 		baseMetaTags: Object.freeze(baseMetaTags),
-		feedbackForm: await superValidate(zod(FeedbackValidationSchema))
+		feedbackForm: await superValidate(zod(FeedbackValidationZodSchema))
 	};
 }) satisfies LayoutServerLoad;
