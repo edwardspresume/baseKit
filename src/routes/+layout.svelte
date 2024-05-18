@@ -2,19 +2,15 @@
 	import { dev } from '$app/environment';
 	import { page } from '$app/stores';
 
-	import { getFlash } from 'sveltekit-flash-message';
-
-	import { toast } from 'svelte-sonner';
-
-	import { inject } from '@vercel/analytics';
-
 	import { Toaster } from '$components/ui/sonner';
 	import { Bar } from '@bobbymannino/svelte-progress';
-	import { ModeWatcher } from 'mode-watcher';
-	import { setupViewTransition } from 'sveltekit-view-transition';
-
+	import { inject } from '@vercel/analytics';
 	import extend from 'just-extend';
+	import { ModeWatcher } from 'mode-watcher';
 	import { MetaTags } from 'svelte-meta-tags';
+	import { toast } from 'svelte-sonner';
+	import { getFlash } from 'sveltekit-flash-message';
+	import { setupViewTransition } from 'sveltekit-view-transition';
 
 	import { route } from '$lib/ROUTES';
 	import { mainNavLinks } from '$lib/utils/navLinks';
@@ -23,19 +19,23 @@
 
 	import SiteMainHeader from '$components/siteMainHeader/SiteMainHeader.svelte';
 
-	export let data;
+	const { data, children } = $props();
 
 	const flash = getFlash(page);
 
-	$: if ($flash) {
-		toast.info($flash.message);
-	}
+	let metaTags = $state({});
 
 	inject({ mode: dev ? 'development' : 'production' });
 
 	setupViewTransition();
 
-	$: metaTags = extend(true, {}, data.baseMetaTags, $page.data.pageMetaTags);
+	$effect(() => {
+		if ($flash) toast[$flash.type]($flash.message);
+	});
+
+	$effect(() => {
+		metaTags = extend(true, {}, data.baseMetaTags, $page.data.pageMetaTags);
+	});
 </script>
 
 <MetaTags {...metaTags} />
@@ -44,22 +44,8 @@
 <Toaster richColors closeButton position={'top-center'} />
 <ModeWatcher />
 
-<div class="flex flex-col h-svh">
-	<SiteMainHeader heading="Logo" headingHref={route('/')} navLinks={mainNavLinks} />
+<SiteMainHeader heading="Logo" headingHref={route('/')} navLinks={mainNavLinks} />
 
-	<main class="container flex-1 p-2 pb-10">
-		<slot />
-	</main>
-
-	<footer class="px-2 py-3 border-t">
-		<div class="container mx-auto">
-			<p class="text-sm text-center">
-				Created by <a
-					href="https://twitter.com/edwardspresume"
-					target="_blank"
-					class="italic text-blue-400 hover:text-blue-500 hover:underline">Edwards Presume</a
-				>
-			</p>
-		</div>
-	</footer>
-</div>
+<main class="container flex-1 p-2 pb-10">
+	{@render children()}
+</main>
