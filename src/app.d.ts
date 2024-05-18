@@ -10,7 +10,7 @@ declare global {
 		interface PageData {
 			pageMetaTags?: MetaTagsProps;
 			isUserLoggedIn?: boolean;
-			flash?: { type: 'success' | 'error'; message: string };
+			flash?: { type: 'success' | 'error' | 'warning' | 'info'; message: string };
 		}
 		// interface PageState {}
 		// interface Platform {}
