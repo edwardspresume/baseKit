@@ -6,9 +6,15 @@
 	import SiteMainNavMenuToggleBtn from './SiteMainNavMenuToggleBtn.svelte';
 	import ThemeToggler from './ThemeToggler.svelte';
 
-	export let heading: string;
-	export let headingHref: string;
-	export let navLinks: NavLinks;
+	const {
+		heading,
+		headingHref,
+		navLinks
+	}: {
+		heading: string;
+		headingHref: string;
+		navLinks: NavLinks;
+	} = $props();
 </script>
 
 <header class="relative mb-10 border-b border-accent-foreground/10">
