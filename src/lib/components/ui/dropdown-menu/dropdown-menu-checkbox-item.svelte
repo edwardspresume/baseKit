@@ -1,7 +1,7 @@
 <script lang="ts">
+	import { cn } from '$lib/utils/styleTransitionUtils.js';
 	import { DropdownMenu as DropdownMenuPrimitive } from 'bits-ui';
-	import { cn } from '$lib/utils/styleTransitionUtils';
-	import { Check } from 'lucide-svelte';
+	import Check from 'lucide-svelte/icons/check';
 
 	type $$Props = DropdownMenuPrimitive.CheckboxItemProps;
 	type $$Events = DropdownMenuPrimitive.CheckboxItemEvents;
@@ -28,7 +28,7 @@
 >
 	<span class="absolute left-2 flex h-3.5 w-3.5 items-center justify-center">
 		<DropdownMenuPrimitive.CheckboxIndicator>
-			<Check class="h-4 w-4" />
+			<Check class="w-4 h-4" />
 		</DropdownMenuPrimitive.CheckboxIndicator>
 	</span>
 	<slot />

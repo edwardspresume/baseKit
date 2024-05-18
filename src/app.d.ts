@@ -24,4 +24,4 @@ declare global {
 	}
 }
 
-export { };
+export {};
