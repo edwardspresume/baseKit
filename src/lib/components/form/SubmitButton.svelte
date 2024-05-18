@@ -1,16 +1,24 @@
 <script lang="ts">
+	import type { Snippet } from 'svelte';
 	import type { HTMLButtonAttributes } from 'svelte/elements';
 
 	import { cn } from '$lib/utils/styleTransitionUtils';
 
 	import Button from '$components/ui/button/button.svelte';
 
-	let className: HTMLButtonAttributes['class'] = undefined;
-
-	export { className as class };
-	export let disabled: boolean = false;
-	export let formaction: string | null = null;
-	export let showSpinner: boolean | null = null;
+	let {
+		children,
+		disabled,
+		formaction,
+		showSpinner,
+		class: className
+	}: {
+		children?: Snippet;
+		disabled?: boolean;
+		formaction?: string | null;
+		showSpinner?: boolean | undefined;
+		class?: HTMLButtonAttributes['class'];
+	} = $props();
 </script>
 
 <Button
@@ -18,13 +26,17 @@
 	{formaction}
 	type="submit"
 	aria-disabled={disabled}
-	class={cn('gap-2 font-bold', className)}
+	class={cn('gap-2', className)}
 >
-	{#if showSpinner === null ? disabled : showSpinner}
+	{#if showSpinner === undefined ? disabled : showSpinner}
 		<iconify-icon icon="eos-icons:bubble-loading"></iconify-icon>
 	{/if}
 
 	<span>
-		<slot>Submit</slot>
+		{#if children}
+			{@render children()}
+		{:else}
+			Submit
+		{/if}
 	</span>
 </Button>
