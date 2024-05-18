@@ -1,7 +1,7 @@
 import { route } from '$lib/ROUTES';
 import type { AriaAttributes } from 'svelte/elements';
 
-export type NavLink = {
+type NavLink = {
 	href: string;
 	title: string;
 	ariaLabel?: AriaAttributes['aria-label'];
@@ -12,13 +12,15 @@ export type NavLinks = {
 	[key: string]: NavLink;
 };
 
-export const createNavLink = ({ title, href, ariaLabel, isExternal }: Partial<NavLink>) => {
-	if (!title || !href) {
-		throw new Error(
-			`Title and href are required to create a NavLink. Received title: ${title}, href: ${href}`
-		);
-	}
+type CreateNavLinkParams = Required<Pick<NavLink, 'title' | 'href'>> &
+	Partial<Pick<NavLink, 'ariaLabel' | 'isExternal'>>;
 
+export const createNavLink = ({
+	title,
+	href,
+	ariaLabel,
+	isExternal
+}: CreateNavLinkParams): NavLink => {
 	ariaLabel = ariaLabel ?? `Go to ${title.toLowerCase()} page`;
 
 	return {
