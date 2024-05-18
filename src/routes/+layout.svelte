@@ -3,7 +3,6 @@
 	import { page } from '$app/stores';
 
 	import { Toaster } from '$components/ui/sonner';
-	import { Bar } from '@bobbymannino/svelte-progress';
 	import { inject } from '@vercel/analytics';
 	import extend from 'just-extend';
 	import { ModeWatcher } from 'mode-watcher';
@@ -40,7 +39,6 @@
 
 <MetaTags {...metaTags} />
 
-<Bar color="#6D28D9" size="big" speed="fast" />
 <Toaster richColors closeButton position={'top-center'} />
 <ModeWatcher />
 
