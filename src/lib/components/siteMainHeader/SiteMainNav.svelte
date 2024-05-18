@@ -1,9 +1,9 @@
 <script context="module" lang="ts">
-	import { writable } from 'svelte/store';
-
 	export const MAIN_NAV_ID: string = 'main_navigation_id';
 
-	export const isSiteNavMenuOpen = writable(false);
+	export const navigationMenuState = $state({
+		isOpen: false
+	});
 </script>
 
 <script lang="ts">
@@ -15,18 +15,20 @@
 
 	import Button from '$components/ui/button/button.svelte';
 
-	let className: HTMLAttributes<HTMLElement>['class'] = undefined;
-	export { className as class };
-	export let navLinks: NavLinks;
+	const {
+		navLinks,
+		class: className
+	}: {
+		navLinks: NavLinks;
+		class?: HTMLAttributes<HTMLElement>['class'];
+	} = $props();
 
 	// Computes classes based on the navigation menu state
-	$: dynamicClasses = {
-		'-translate-x-full': !$isSiteNavMenuOpen
-	};
+	const dynamicClasses = $derived(navigationMenuState.isOpen ? '' : '-translate-x-full');
 
 	// Defines static classes for the navigation component
 	const staticClasses =
-		'absolute left-0 z-50 w-full px-4 pt-10 transition-transform duration-300 top-full h-svh sm:h-full sm:relative sm:w-fit sm:-translate-x-0 sm:p-0 bg-secondary sm:bg-transparent';
+		'absolute left-0 z-50 w-full px-4 pt-10 border-t border-accent-foreground/10 transition-transform duration-300 top-full h-svh sm:h-full sm:relative sm:border-t-0 sm:w-fit sm:-translate-x-0 sm:p-0 bg-secondary sm:bg-transparent';
 </script>
 
 <nav
@@ -40,11 +42,14 @@
 
 			<li>
 				<Button
+					size="sm"
 					href={link.href}
 					variant="outline"
 					aria-label={link.ariaLabel}
 					aria-current={isCurrentPage}
-					class={isCurrentPage ? 'font-semibold text-primary' : 'text-muted-foreground'}
+					class={isCurrentPage
+						? 'bg-accent-foreground font-semibold text-background'
+						: 'text-muted-foreground'}
 				>
 					{link.title}
 				</Button>

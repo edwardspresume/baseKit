@@ -1,31 +1,25 @@
 <script>
 	import { navigating } from '$app/stores';
-	import { onMount } from 'svelte';
 
-	import { MAIN_NAV_ID, isSiteNavMenuOpen } from './SiteMainNav.svelte';
+	import { MAIN_NAV_ID, navigationMenuState } from './SiteMainNav.svelte';
 
 	// Close the site nav menu when navigating
-	$: if ($navigating) $isSiteNavMenuOpen = false;
+	$effect(() => {
+		if ($navigating) navigationMenuState.isOpen = false;
+	});
 
-	onMount(() => {
-		// Prevent scrolling when site nav menu is open
-		const unsubscribe = isSiteNavMenuOpen.subscribe((value) => {
-			document.body.style.overflow = value ? 'hidden' : 'auto';
-		});
-
-		// Cleanup function to run when component is destroyed
-		return () => {
-			unsubscribe();
-		};
+	// Prevent scrolling when site nav menu is open
+	$effect(() => {
+		document.body.style.overflow = navigationMenuState.isOpen ? 'hidden' : 'auto';
 	});
 </script>
 
 <button
 	aria-controls={MAIN_NAV_ID}
-	aria-expanded={$isSiteNavMenuOpen}
+	aria-expanded={navigationMenuState.isOpen}
 	aria-label="Toggle Main Navigation"
-	on:click={() => ($isSiteNavMenuOpen = !$isSiteNavMenuOpen)}
-	class="p-2 border rounded sm:hidden"
+	onclick={() => (navigationMenuState.isOpen = !navigationMenuState.isOpen)}
+	class="rounded border p-2 sm:hidden"
 >
 	<span></span>
 	<span></span>
