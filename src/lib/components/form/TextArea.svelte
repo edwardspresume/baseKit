@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { HTMLTextareaAttributes } from 'svelte/elements';
 
-	import type { EnterKeyHintType } from '$lib/types';
+	import type { EnterKeyHintType } from '$lib/utils/types';
 	import { cn } from '$lib/utils/styleTransitionUtils';
 
 	import Label from '$components/ui/label/label.svelte';

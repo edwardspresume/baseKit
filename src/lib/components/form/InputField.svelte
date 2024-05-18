@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { HTMLInputAttributes } from 'svelte/elements';
 
-	import type { EnterKeyHintType } from '$lib/types';
+	import type { EnterKeyHintType } from '$lib/utils/types';
 	import { cn } from '$lib/utils/styleTransitionUtils';
 
 	let className: HTMLInputAttributes['class'] = undefined;
