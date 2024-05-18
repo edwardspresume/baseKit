@@ -2,7 +2,7 @@
 
 This starter template is designed for developers looking to jumpstart their [SvelteKit](https://kit.svelte.dev/) projects. It comes pre-configured with a suite of tools in aim to enforce best practices and ensure high-quality, maintainable code.
 
-To speed up initial setup and not have deployment hassles, the unit and end-to-end (2e2) starter tests and GitHub action workflows have been removed from the main branch but retained in the [with_tests branch](https://github.com/edwardspresume/baseKit/tree/with_tests) for reference.
+To speed up initial setup and not have deployment hassles, the unit and end-to-end (2e2) starter tests and GitHub action workflows have been removed from the main branch but retained in the [with_tests branch](https://github.com/edwardspresume/baseKit/tree/with_tests) for reference. This branch is not maintained and outdated.
 
 ## Getting Started
 
@@ -83,7 +83,6 @@ pnpm build
 
 ### Code Quality and Testing
 
-- 🤖 **[GitHub Actions](https://github.com/features/actions)**: This repository includes a GitHub action for continuous integration/continuous deployment (CI/CD) workflows.
 - 🗑️ **[Knip](https://www.npmjs.com/package/knip)**: Finds unused files, dependencies, and exports in projects.
 - 🛠️ **[ESLint](https://eslint.org/)** & **✨ [Prettier](https://prettier.io/)**: Code quality tools.
 - 🧪 **Testing**: Unit tests with [Vitest](https://vitest.dev/), E2E tests with [Playwright](https://playwright.dev/).
