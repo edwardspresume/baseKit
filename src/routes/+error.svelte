@@ -6,7 +6,7 @@
 	import Button from '$components/ui/button/button.svelte';
 </script>
 
-<div class="grid gap-5 text-center place-items-center">
+<div class="flex flex-col items-center justify-center h-screen gap-5">
 	{#if $page.status === 404}
 		<h1 class="text-2xl font-bold">404 - Page Not Found</h1>
 
