@@ -27,9 +27,9 @@
 	on:click={() => ($isSiteNavMenuOpen = !$isSiteNavMenuOpen)}
 	class="p-2 border rounded sm:hidden"
 >
-	<span />
-	<span />
-	<span />
+	<span></span>
+	<span></span>
+	<span></span>
 </button>
 
 <style lang="postcss">
