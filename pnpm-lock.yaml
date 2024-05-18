@@ -55,9 +55,6 @@ dependencies:
     version: 0.5.3
 
 devDependencies:
-  '@bobbymannino/svelte-progress':
-    specifier: ^2.3.0
-    version: 2.3.0
   '@sveltejs/adapter-auto':
     specifier: ^3.2.0
     version: 3.2.0(@sveltejs/kit@2.5.9)
@@ -212,10 +209,6 @@ packages:
       '@babel/helper-validator-identifier': 7.24.5
       to-fast-properties: 2.0.0
     dev: false
-
-  /@bobbymannino/svelte-progress@2.3.0:
-    resolution: {integrity: sha512-WONB/rhKh3Rxo509bNqNxhBXv5OpVXlEsxM2K8/sj9kqEf6BD+Q6ugx7egzX1Qg2nxNmZpzd4JCD4k1uWggMUA==}
-    dev: true
 
   /@csstools/cascade-layer-name-parser@1.0.11(@csstools/css-parser-algorithms@2.6.3)(@csstools/css-tokenizer@2.3.1):
     resolution: {integrity: sha512-yhsonEAhaWRQvHFYhSzOUobH2Ev++fMci+ppFRagw0qVSPlcPV4FnNmlwpM/b2BM10ZeMRkVV4So6YRswD0O0w==}
