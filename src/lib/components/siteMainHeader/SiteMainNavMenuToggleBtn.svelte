@@ -19,7 +19,7 @@
 	aria-expanded={navigationMenuState.isOpen}
 	aria-label="Toggle Main Navigation"
 	onclick={() => (navigationMenuState.isOpen = !navigationMenuState.isOpen)}
-	class="rounded border p-2 sm:hidden"
+	class="p-2 border rounded sm:hidden"
 >
 	<span></span>
 	<span></span>
