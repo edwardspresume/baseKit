@@ -22,19 +22,16 @@
 		navLinks: NavLinks;
 		class?: HTMLAttributes<HTMLElement>['class'];
 	} = $props();
-
-	// Computes classes based on the navigation menu state
-	const dynamicClasses = $derived(navigationMenuState.isOpen ? '' : '-translate-x-full');
-
-	// Defines static classes for the navigation component
-	const staticClasses =
-		'absolute left-0 z-50 w-full px-4 pt-10 border-t border-accent-foreground/10 transition-transform duration-300 top-full h-svh sm:h-full sm:relative sm:border-t-0 sm:w-fit sm:-translate-x-0 sm:p-0 bg-secondary sm:bg-transparent';
 </script>
 
 <nav
 	id={MAIN_NAV_ID}
 	aria-label="Main Navigation"
-	class={cn(staticClasses, dynamicClasses, className)}
+	class:-translate-x-full={!navigationMenuState.isOpen}
+	class={cn(
+		'absolute left-0 top-full z-50 h-svh w-full border-t border-accent-foreground/10 bg-secondary px-4 pt-10 transition-transform duration-300 sm:relative sm:h-full sm:w-fit sm:-translate-x-0 sm:border-t-0 sm:bg-transparent sm:p-0',
+		className
+	)}
 >
 	<ul class="grid gap-5 *:*:w-full sm:flex sm:gap-2">
 		{#each Object.values(navLinks) as link}
