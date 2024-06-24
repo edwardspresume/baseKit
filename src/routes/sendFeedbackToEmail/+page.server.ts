@@ -10,31 +10,13 @@ import { logError, sanitizeContent } from '$lib/utils';
 
 import { FeedbackValidationZodSchema } from '$validations/feedbackValidationZodSchema';
 
-/**
- * Creates a nodemailer Transporter instance
- * @returns {nodemailer.Transporter} nodemailer Transporter instance
- */
-function createEmailTransport() {
-	return nodemailer.createTransport({
-		service: 'gmail',
-		auth: {
-			user: SECRET_GMAIL_USERNAME,
-			pass: SECRET_GMAIL_PASS
-		}
-	});
-}
-
-/**
- *  Sends an email using nodemailer
- * @param {object} mailOptions nodemailer mail options
- * @returns {Promise<nodemailer.SentMessageInfo>} nodemailer SentMessageInfo
- * @see https://nodemailer.com/about/
- * @see https://nodemailer.com/message/
- */
-async function sendEmail(mailOptions: object) {
-	const emailTransporter = createEmailTransport();
-	return emailTransporter.sendMail(mailOptions);
-}
+const emailTransporter = nodemailer.createTransport({
+	service: 'gmail',
+	auth: {
+		user: SECRET_GMAIL_USERNAME,
+		pass: SECRET_GMAIL_PASS
+	}
+});
 
 export const actions: Actions = {
 	default: async ({ request }) => {
@@ -52,15 +34,17 @@ export const actions: Actions = {
 		const sanitizedMessage = sanitizeContent(feedbackMessage);
 
 		try {
-			await sendEmail({
+			const feedbackEmailResponse = await emailTransporter.sendMail({
 				from: SECRET_GMAIL_USERNAME,
 				to: SECRET_GMAIL_USERNAME,
-				subject: `CaptionThat Feedback`,
+				subject: `Feedback`,
 				html: `
                 <h2>New Feedback</h2>
                 <p>${sanitizedMessage}</p>
             `
 			});
+
+			console.log({ feedbackEmailResponse });
 
 			return message(feedbackForm, {
 				alertType: 'success',
