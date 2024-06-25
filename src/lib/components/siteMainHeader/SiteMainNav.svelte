@@ -15,13 +15,12 @@
 
 	import Button from '$components/ui/button/button.svelte';
 
-	const {
-		navLinks,
-		class: className
-	}: {
+	type Props = {
 		navLinks: NavLinks;
 		class?: HTMLAttributes<HTMLElement>['class'];
-	} = $props();
+	};
+
+	const { navLinks, class: className }: Props = $props();
 </script>
 
 <nav

@@ -8,11 +8,11 @@
 	import Button from '$components/ui/button/button.svelte';
 	import * as DropdownMenu from '$components/ui/dropdown-menu';
 
-	const {
-		class: className
-	}: {
+	type Props = {
 		class?: HTMLAttributes<HTMLElement>['class'];
-	} = $props();
+	};
+
+	const { class: className }: Props = $props();
 </script>
 
 <DropdownMenu.Root>
