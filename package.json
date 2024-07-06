@@ -3,7 +3,6 @@
 	"version": "0.0.1",
 	"packageManager": "pnpm@8.14.0",
 	"scripts": {
-		"knip": "knip",
 		"dev": "vite dev --host --open",
 		"build": "vite build",
 		"preview": "vite preview --host --open",
@@ -38,7 +37,6 @@
 		"eslint-config-prettier": "^9.1.0",
 		"eslint-plugin-svelte": "^2.41.0",
 		"jsdom": "^24.1.0",
-		"knip": "^5.24.1",
 		"postcss": "^8.4.39",
 		"postcss-load-config": "^5.1.0",
 		"postcss-preset-env": "^9.5.16",
