@@ -4,20 +4,36 @@
 	import type { EnterKeyHintType } from '$lib/utils/types';
 	import { cn } from '$lib/utils/styleTransitionUtils';
 
-	let className: HTMLInputAttributes['class'] = undefined;
-	export { className as class };
-	export let type: HTMLInputAttributes['type'];
-	export let value: string | null | undefined = '';
-	export let name: string = '';
-	export let label: string = '';
-	export let placeholder: string = '';
-	export let spellcheck: boolean = true;
-	export let autocomplete: string = 'on';
-	export let enterkeyhint: EnterKeyHintType = 'next';
-	export let maxlength: number | undefined = undefined;
-	export let errorMessage: object | undefined = undefined;
+	type Props = {
+		class?: HTMLInputAttributes['class'];
+		type: HTMLInputAttributes['type'];
+		value?: string | null | undefined;
+		name: string;
+		label: string;
+		placeholder: string;
+		spellcheck?: boolean;
+		autocomplete?: string;
+		enterkeyhint?: EnterKeyHintType;
+		maxlength?: number;
+		errorMessage?: object | undefined;
+	};
 
-	$: valueLength = value?.length;
+	let {
+		class: className,
+		type,
+		value = $bindable(),
+		name = '',
+		label = '',
+		placeholder = '',
+		spellcheck = true,
+		autocomplete = 'on',
+		enterkeyhint = 'next',
+		maxlength,
+		errorMessage,
+		...restProps
+	}: Props = $props();
+
+	let valueLength = $derived(value?.length || 0);
 </script>
 
 <label
@@ -39,7 +55,7 @@
 
 	<input
 		{name}
-		{...{ type }}
+		{type}
 		dir="auto"
 		bind:value
 		{maxlength}
@@ -50,6 +66,6 @@
 		aria-label={label}
 		class={cn('rounded border bg-transparent px-3 py-2', className)}
 		aria-invalid={errorMessage ? 'true' : undefined}
-		{...$$restProps}
+		{...restProps}
 	/>
 </label>

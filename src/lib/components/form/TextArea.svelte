@@ -1,24 +1,38 @@
 <script lang="ts">
 	import type { HTMLTextareaAttributes } from 'svelte/elements';
 
-	import type { EnterKeyHintType } from '$lib/utils/types';
 	import { cn } from '$lib/utils/styleTransitionUtils';
+	import type { EnterKeyHintType } from '$lib/utils/types';
 
 	import Label from '$components/ui/label/label.svelte';
 	import Textarea from '$components/ui/textarea/textarea.svelte';
 
-	let className: HTMLTextareaAttributes['class'] = undefined;
-	export { className as class };
-	export let value: string | undefined = '';
-	export let name: string = '';
-	export let label: string = '';
-	export let placeholder: string = '';
-	export let spellcheck: boolean = true;
-	export let enterkeyhint: EnterKeyHintType = 'enter';
-	export let maxlength: number | undefined = undefined;
-	export let errorMessage: object | undefined = undefined;
+	type Props = {
+		class?: HTMLTextareaAttributes['class'];
+		value?: string | undefined;
+		name: string;
+		label: string;
+		placeholder: string;
+		errorMessage: string[] | undefined;
+		spellcheck?: boolean;
+		enterkeyhint?: EnterKeyHintType;
+		maxlength?: number;
+	};
 
-	$: valueLength = value?.length || 0;
+	let {
+		class: className,
+		value = $bindable(),
+		name = '',
+		label = '',
+		placeholder = '',
+		errorMessage,
+		spellcheck = true,
+		enterkeyhint = 'enter',
+		maxlength,
+		...restProps
+	}: Props = $props();
+
+	let valueLength = $derived(value?.length || 0);
 </script>
 
 <Label class="grid gap-2">
@@ -47,6 +61,6 @@
 		aria-label={label}
 		class={cn(className)}
 		aria-invalid={errorMessage ? 'true' : undefined}
-		{...$$restProps}
+		{...restProps}
 	/>
 </Label>
