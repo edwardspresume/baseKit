@@ -15,4 +15,4 @@ export const createNameSchema = () =>
 		.regex(/^[a-zA-Z\s]*$/, 'Name should only contain alphabetic characters');
 
 export const createEmailSchema = () =>
-	z.string().email('Please enter a valid email address').trim();
+	z.string().email('Please enter a valid email address').max(255, 'Email is too long').trim();
