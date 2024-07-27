@@ -2,11 +2,11 @@ import { z } from 'zod';
 
 const MIN_FEEDBACK_LENGTH = 10;
 
-export const FeedbackValidationZodSchema = z.object({
+export const feedbackValidationZodSchema = z.object({
 	message: z
 		.string()
 		.min(MIN_FEEDBACK_LENGTH, `Message must be at least ${MIN_FEEDBACK_LENGTH} characters`)
 		.transform((str) => str.trim())
 });
 
-export type FeedbackValidationSchemaType = typeof FeedbackValidationZodSchema;
+export type FeedbackValidationSchemaType = typeof feedbackValidationZodSchema;

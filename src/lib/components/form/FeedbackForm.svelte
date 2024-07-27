@@ -4,11 +4,9 @@
 	import { superForm } from 'sveltekit-superforms';
 	import { zodClient } from 'sveltekit-superforms/adapters';
 
-	import { toast } from 'svelte-sonner';
-
-	import { FeedbackValidationZodSchema } from '$validations/feedbackValidationZodSchema';
-
 	import { route } from '$lib/ROUTES';
+	import { feedbackValidationZodSchema } from '$validations/feedbackValidationZodSchema';
+	import { toast } from 'svelte-sonner';
 
 	import { buttonVariants } from '$components/ui/button';
 	import * as Dialog from '$components/ui/dialog';
@@ -17,7 +15,7 @@
 
 	const { enhance, form, errors, message, delayed } = superForm($page.data['feedbackForm'], {
 		id: 'feedbackForm',
-		validators: zodClient(FeedbackValidationZodSchema),
+		validators: zodClient(feedbackValidationZodSchema),
 
 		onUpdated: () => {
 			if (!$message) return;
