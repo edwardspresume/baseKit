@@ -50,7 +50,7 @@ export const userRegisterZodSchema = z
 export const passwordSetOrChangeZodSchema = z
 	.object({
 		password: createPasswordSchema(),
-		confirmPassword: z.string().min(1, 'Confirm password is required').trim(),
+		confirmPassword: z.string(),
 		token: z.string().optional()
 	})
 	.refine((data) => data.password === data.confirmPassword, {
